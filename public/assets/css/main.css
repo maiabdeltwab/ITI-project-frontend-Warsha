@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+/***
+* Main theme colors
+***/
+*::-moz-selection {
+  background-color: #171616;
+  color: #ffffff;
+}
+*::selection {
+  background-color: #171616;
+  color: #ffffff;
+}
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: #3a3535;
+  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h3,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+/**
+*   Basic Classes
+**/
+.mark {
+  background-color: #3A3535;
+  color: #ffffff;
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.btn {
+  border-radius: 40px;
+  border: none;
+}
+/*# sourceMappingURL=main.css.map */

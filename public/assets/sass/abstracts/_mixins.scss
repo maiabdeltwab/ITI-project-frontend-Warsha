@@ -24,16 +24,3 @@
         @content;
     }
 }
-
-@mixin btn-active($color) {
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: $color + #222222;
-    }
-    &:focus,
-    &:active,
-    &.focus {
-        box-shadow: none;
-    }
-}
