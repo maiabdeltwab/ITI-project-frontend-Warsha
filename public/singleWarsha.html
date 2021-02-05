@@ -1,0 +1,188 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warsha</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/sass/main.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        
+        <div class="row ">
+            <div class="col-xl-12">
+                <div class="btnDiv">
+                    <button id="ServicetButton" class="singleWarshaButton"> Price list</button>
+                    <svg>
+                        <line x1="0rem" y1="6.1rem" x2="6.875rem" y2="0rem" />
+                    </svg>
+                    <button id="commentButton" class="singleWarshaButton"> Comments</button>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-xl-12">
+
+                <table id="serviceTable" class="table table-bordered table-striped ">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>price</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>General Maintenance Services</td>
+                            <td style=" color: #8C0909; ">100$</td>
+                        </tr>
+
+                        <tr>
+                            <td>Change Oil</td>
+                            <td style=" color: #8C0909;;">100$</td>
+                        </tr>
+                        <tr>
+                            <td>Brake Check and Repair</td>
+                            <td style=" color: #8C0909;">100$</td>
+                        </tr>
+                        <tr>
+                            <td>Tire Inspection and Replacement</td>
+                            <td style=" color: #8C0909;">200$</td>
+                        </tr>
+                        <tr>
+                            <td>Main Engine Repair</td>
+                            <td style=" color: #8C0909;;">300$</td>
+                        </tr>
+                        <tr>
+                            <td>Vehicle Inspection</td>
+                            <td style=" color: #8C0909;">400$</td>
+                        </tr>
+                        <tr>
+                            <td>Get Rid of Traces of Dings and Paint</td>
+                            <td style=" color: #8C0909;">1000$</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                
+                <div id="commentsbox" style="display: flex;">
+                    <!-- <img src="assets/images/img_avatar3.png" alt="John Doe" class="mr-2 rounded-circle" style="width:40px;"> -->
+
+                    <!-- was div1 -->
+                    <div id="Comments" >
+                        <span class="name">Abram Samir</span>
+                        <p class="customerComment">They are very collaborator and help me in my Emergency. It is a good
+                            WorkShop they came on time</p>
+                        <br>
+
+                        <span class="name">Mai Abd Eltwab</span>
+                        <p class="customerComment">They are very collaborator and help me in my Emergency</p>
+                        <br>
+
+                        <span class="name">Mohammed El-Mostafa</span>
+                        <p class="customerComment">They aren't greedy they doesn't take any taxes from me</p>
+                        <br>
+
+                        <span class="name">Yomna Hosni</span>
+                        <p class="customerComment">They are very collaborator and help me in my Emergency. They aren't
+                            greedy they doesn't take any
+                            taxes
+                            from me</p>
+                        <br>
+                        <span class="name">Ahmed Mohammed</span>
+                        <p class="customerComment">It is a good WorkShop they came on time</p>
+
+                        <!-- <span></span>
+                        <p id="para"></p> -->
+                    </div>
+                    <div class="writeComment">
+                        <br>
+                        <br>
+
+
+                        <div class="rating-wrap">
+                            <div class="row">
+                                <div class="yourComment">Your Rating</div>
+
+                                <div class="center">
+                                    <fieldset class="rating">
+                                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"
+                                            class="full" title="Awesome"></label>
+                                        <input type="radio" id="star4.5" name="rating" value="4.5" /><label
+                                            for="star4.5" class="half"></label>
+                                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"
+                                            class="full"></label>
+                                        <input type="radio" id="star3.5" name="rating" value="3.5" /><label
+                                            for="star3.5" class="half"></label>
+                                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"
+                                            class="full"></label>
+                                        <input type="radio" id="star2.5" name="rating" value="2.5" /><label
+                                            for="star2.5" class="half"></label>
+                                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
+                                            class="full"></label>
+                                        <input type="radio" id="star1.5" name="rating" value="1.5" /><label
+                                            for="star1.5" class="half"></label>
+                                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
+                                            class="full"></label>
+                                        <input type="radio" id="star0.5" name="rating" value="0.5" /><label
+                                            for="star0.5" class="half"></label>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+
+                            
+                        </div>
+
+                        <textarea id="txtArea" placeholder="Write your Review"></textarea>
+                        <br>
+                        <br>
+                        <button onclick="post()" class="btn btn-primary " data-toggle="modal"
+                            data-target="#myModal">Submit Your Review</button>
+                        <!-- The Modal -->
+                        <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Warsha</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <p id="Thanks"></p>
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/src/singleWarsha.js"></script>
+    <script src="assets/js/src/signup.js"></script>
+</body>
+
+</html>
