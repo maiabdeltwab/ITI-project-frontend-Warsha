@@ -127,10 +127,6 @@ body::after {
   border-top: 0;
 }
 
-.signup--page .left--side {
-  border-radius: 0.4rem 0 0 0.4rem;
-}
-
 @media (min-width: 992px) {
   .signup--page .right--side {
     border-radius: 0 0.4rem 0.4rem 0;
@@ -239,6 +235,11 @@ body::after {
   color: #ffffff;
 }
 
+.signup--page .left--side {
+  background-color: #171616d3;
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+
 .signup--page .left--side .carousel-indicators {
   bottom: 10px;
   opacity: 0.7;
@@ -249,7 +250,7 @@ body::after {
   height: 25px;
   margin-right: 20px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .signup--page .left--side .carousel-indicators .active {
@@ -258,11 +259,12 @@ body::after {
 }
 
 .signup--page .left--side .carousel-caption {
-  font-family: "Roboto", sans-serif;
   color: #ffffff;
+  text-align: center;
 }
 
 .signup--page .left--side .carousel-caption span {
+  font-family: "Roboto", sans-serif;
   color: #d89216;
   font-size: 1.3em;
 }
@@ -274,7 +276,7 @@ body::after {
 
 .signup--page .left--side img {
   height: 470px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .signup--page .alert {
@@ -283,8 +285,10 @@ body::after {
   top: 2rem;
   padding: 0.5rem 2.4rem;
   background-color: #8c0909;
-  color: #ffffff;
-  border: 2px solid #171616;
-  opacity: 0.9;
+  color: white;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: 1px 1px 4px black;
+          box-shadow: 1px 1px 4px black;
 }
 /*# sourceMappingURL=main.css.map */
