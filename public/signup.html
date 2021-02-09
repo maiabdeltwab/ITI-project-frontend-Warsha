@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>warsha-signup</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="signup--page">
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alert-error">
+                <i class="fa fa-exclamation-triangle"></i> There are items that require your attention
+                <button type="button" class="close" onclick="$('#alert-error').fadeOut()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 d-none d-lg-block bg-dark left--side">
+                <div id="carousel" class="carousel slide justify-content-center" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <i class="fa fa-circle active" data-target="#carousel" data-slide-to="0"></i>
+                        <i class="fa fa-circle" data-target="#carousel" data-slide-to="1"> </i>
+                        <i class="fa fa-circle" data-target="#carousel" data-slide-to="2"></i>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div id="img-1" class="carousel-item active">
+                            <img class="" src="assets/images/signup (1).png" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3> Maintenance Your Car In <br> <span>Your Place.</span> </h3>
+                            </div>
+                        </div>
+                        <div id="img-2" class="carousel-item">
+                            <img class="" src="assets/images/signup (4).png" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3> Don’t worry we are <br> <span>Always</span> here <span>!</span> </h3>
+                            </div>
+                        </div>
+                        <div id="img-3" class="carousel-item">
+                            <img class="" src="assets/images/signup (5).png" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3> <span>Find </span> All You Need .. </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 bg-light right--side">
+                <div class="content m-5">
+                    <a href="#" class="main--link d-block mb-5">
+                        <h1 class="h3 header">Sign Up</h1>
+                        <hr class="header--border">
+                    </a>
+                    <div>
+                        <div class="signup--form">
+                            <form action="/login.html" onsubmit="return save()" autocomplete="off">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <i class="fa fa-user"></i>
+                                        <input type="text" placeholder="username" id='username' title="Enter username" required>
+                                        <i class="fa fa-times error--icon" data-toggle="tooltip" data-placement="top">
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" id="first-name" class="delete--padding" placeholder="First name" required>
+                                        <i class="fa fa-times error--icon icon-half" data-toggle="tooltip" data-placement="right">
+                                        </i>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" id="last-name" class="delete--padding" placeholder="Last name" required>
+                                        <i class="fa fa-times error--icon icon-half" data-toggle="tooltip" data-placement="right">
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <i class="fa fa-envelope"></i>
+                                        <input type="email" id="email" placeholder="Email" required>
+                                        <i class="fa fa-times error--icon" data-toggle="tooltip" data-placement="top">
+                                        </i>
+                                    </div>
+                                </div>
+                                <tr>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <i class="fa fa-phone"></i>
+                                            <input type="tel" id="phone" placeholder="phone number" required>
+                                            <i class="fa fa-times error--icon" data-toggle="tooltip" data-placement="top">
+                                            </i>
+                                        </div>
+                                    </div>
+                                </tr>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <i class="fa fa-lock"></i>
+                                        <input type="password" id="password1" required placeholder="Enter Password">
+                                        <i class="fa fa-times error--icon icon-half" data-toggle="tooltip" data-placement="right">
+                                        </i>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="password" id="password2" class="delete--padding" placeholder="Repeat Passowrd" required>
+                                        <i class="fa fa-times error--icon icon-half" data-toggle="tooltip" data-placement="right">
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center mt-4 mb-4">
+                                    <button type="submit" class="col-sm-11 btn btn-primary btn-lg">Sign up</button></div>
+
+                                <div class="row justify-content-center">
+                                    <div class="form-link">
+                                        <small class="text-muted">Already a member? <a href="/login.html">sign in</a></small>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/src/signup.js"></script>
+
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+            $('#alert-error').hide();
+        });
+    </script>
+
+</body>
+
+</html>

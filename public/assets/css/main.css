@@ -2,30 +2,59 @@
 /***
 * Main theme colors
 ***/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+@import url("https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css");
 *::-moz-selection {
-  background-color: #171616;
+  background-color: #3A3535;
   color: #ffffff;
 }
 *::selection {
-  background-color: #171616;
+  background-color: #3A3535;
   color: #ffffff;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
+/*********** tooltip ***********/
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #171616b6;
+  color: #f4f4f4;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 /**
  * Basic typography style for copy text
  */
 body {
-  color: #3a3535;
+  color: #171616;
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h3,
-h5,
-h6 {
-  font-family: "Roboto", sans-serif;
 }
 
 /**
@@ -68,5 +97,194 @@ h6 {
 .btn {
   border-radius: 40px;
   border: none;
+}
+
+/***********************************
+*   Signup style 
+***********************************/
+body {
+  background-color: #3A3535;
+  background-size: cover;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  background: url("/public/assets/images/sigup-background.jpg");
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.signup--page .header--border {
+  width: 4rem;
+  margin: 0px;
+  border-bottom: 2px solid #d3d3d3;
+  border-top: 0;
+}
+
+.signup--page .left--side {
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+
+@media (min-width: 992px) {
+  .signup--page .right--side {
+    border-radius: 0 0.4rem 0.4rem 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991) {
+  .signup--page .right--side {
+    border-radius: 0.4rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .signup--page .right--side {
+    border-radius: 0;
+  }
+  .signup--page container {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+.signup--page .content a.main--link:hover {
+  text-decoration: none;
+}
+
+.signup--page .signup--form td {
+  position: relative;
+}
+
+.signup--page .signup--form i {
+  color: #d89216;
+  position: absolute;
+  bottom: 1.6rem;
+  font-size: 16px;
+}
+
+.signup--page .signup--form i.error--icon {
+  display: none;
+  color: #8c0909;
+  padding-top: 10px;
+  margin-left: -20px;
+}
+
+.signup--page .signup--form .col-sm-6 input.delete--padding {
+  padding-left: 0rem;
+}
+
+.signup--page .signup--form input {
+  display: inline-block;
+  height: 2.2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 2.1rem;
+  border: none;
+  border-bottom: 1px solid #d3d3d3;
+  background-color: transparent;
+  color: #171616;
+  font-size: 18px;
+}
+
+.signup--page .signup--form input:active {
+  border-bottom: 1rem solid #8c0909;
+}
+
+.signup--page .signup--form input:focus {
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(60deg, #f7c02b, #d89216);
+  padding-left: 0.5rem;
+  -webkit-animation: moveGradient 3s ease alternate infinite;
+          animation: moveGradient 3s ease alternate infinite;
+}
+
+.signup--page .signup--form input:-webkit-autofill, .signup--page .signup--form input:-webkit-autofill:hover, .signup--page .signup--form input:-webkit-autofill:focus, .signup--page .signup--form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1.8rem #f4f4f4 inset !important;
+  box-shadow: 0 0 0 1.8rem #f4f4f4 inset !important;
+}
+
+@-webkit-keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.signup--page .signup--form .btn-primary {
+  color: #ffffff;
+}
+
+.signup--page .left--side .carousel-indicators {
+  bottom: 10px;
+  opacity: 0.7;
+}
+
+.signup--page .left--side .carousel-indicators i {
+  width: 15px;
+  height: 25px;
+  margin-right: 20px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.signup--page .left--side .carousel-indicators .active {
+  background-color: transparent;
+  color: #d89216;
+}
+
+.signup--page .left--side .carousel-caption {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+}
+
+.signup--page .left--side .carousel-caption span {
+  color: #d89216;
+  font-size: 1.3em;
+}
+
+.signup--page .left--side .carousel-item {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.signup--page .left--side img {
+  height: 470px;
+  margin-bottom: 2rem;
+}
+
+.signup--page .alert {
+  position: absolute;
+  z-index: 1;
+  top: 2rem;
+  padding: 0.5rem 2.4rem;
+  background-color: #8c0909;
+  color: #ffffff;
+  border: 2px solid #171616;
+  opacity: 0.9;
 }
 /*# sourceMappingURL=main.css.map */
