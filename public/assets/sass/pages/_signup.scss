@@ -25,9 +25,6 @@
         border-bottom: 2px solid $light-gray;
         border-top: 0;
     }
-    .left--side {
-        border-radius: 0.4rem 0 0 0.4rem;
-    }
     @media (min-width: 992px) {
         .right--side {
             border-radius: 0 0.4rem 0.4rem 0;
@@ -119,6 +116,8 @@
         }
     }
     .left--side {
+        background-color: #171616d3;
+        border-radius: 0.4rem 0 0 0.4rem;
         .carousel-indicators {
             bottom: 10px;
             opacity: 0.7;
@@ -128,17 +127,18 @@
             height: 25px;
             margin-right: 20px;
             color: $text-light;
-            font-size: 14px;
+            font-size: 13px;
         }
         .carousel-indicators .active {
             background-color: transparent;
             color: $primary;
         }
         .carousel-caption {
-            font-family: $header-font-stack;
-            color: $text-light
+            color: $text-light;
+            text-align: center;
         }
         .carousel-caption span {
+            font-family: $header-font-stack;
             color: $primary;
             font-size: 1.3em;
         }
@@ -148,7 +148,7 @@
         }
         img {
             height: 470px;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
     }
     .alert {
@@ -157,8 +157,9 @@
         top: 2rem;
         padding: 0.5rem 2.4rem;
         background-color: $danger;
-        color: $text-light;
-        border: 2px solid $dark;
-        opacity: 0.9;
+        color: white;
+        border: none;
+        border-radius: 0;
+        box-shadow: 1px 1px 4px black;
     }
 }
