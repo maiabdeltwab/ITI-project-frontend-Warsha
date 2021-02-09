@@ -102,12 +102,12 @@ body {
 /***********************************
 *   Signup style 
 ***********************************/
-body {
+.signup--page {
   background-color: #3A3535;
   background-size: cover;
 }
 
-body::after {
+.signup--page::after {
   content: "";
   position: absolute;
   background: url("/public/assets/images/sigup-background.jpg");
