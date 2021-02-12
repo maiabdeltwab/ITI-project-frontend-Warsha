@@ -1,83 +1,88 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Emergancy</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+  <meta charset="UTF-8">
+  <title>Emergancy</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
- <body>
- 
 
-<div class="container-fluid workShops" id="workShops">
-    
-</div>
+<body>
 
-<script src="assets/js/vendor/jquery-slim.min.js"></script>
-<script src="assets/js/vendor/popper.min.js"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>          
-        
-</body> 
+
+  <div class="container-fluid workShops emergancy" id="workShops">
+
+  </div>
+
+  <script src="assets/js/vendor/jquery-slim.min.js"></script>
+  <script src="assets/js/vendor/popper.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+</body>
 <script>
-    var data;
-    var rate="" , j=0;
-    localStorage.setItem('location2', 'giza')
-    function readTextFile(file, callback) {
-      var rawFile = new XMLHttpRequest();
-      rawFile.overrideMimeType("application/json");
-      rawFile.open("GET", file, true);
-      rawFile.onreadystatechange = function() {
-          if (rawFile.readyState === 4 && rawFile.status == "200") {
-              callback(rawFile.responseText);
-          }
+  var data;
+  var rate = "", j = 0;
+  localStorage.setItem('location2', 'giza')
+  function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function () {
+      if (rawFile.readyState === 4 && rawFile.status == "200") {
+        callback(rawFile.responseText);
       }
-      rawFile.send(null);
+    }
+    rawFile.send(null);
   }
-  function loadData()
+  function loadData() {
+    rate = "";
+    j = 0;
+    var cnt = 0;
+    document.getElementById("workShops").innerHTML = "";
+    loc = localStorage.location2;
 
-  {
-    rate="";
-      j=0;
-    var cnt=0;
-   document.getElementById("workShops").innerHTML = "";
-   loc=localStorage.location2;
+    readTextFile("Data.json", function (text) {
+      var data = JSON.parse(text);
 
-  readTextFile("Data.json", function(text){
-    var data = JSON.parse(text);
+      
 
-    var tr = document.createElement('div');
-        tr.className="row";
+      for (var i = 0; i < data.length; i++) {
+        rate = "";
+        j = 0;
+        if (data[i].location == loc) {
 
-    for(var i=0 ; i<data.length;i++){  
-        rate="";
-           j=0;
-    if(data[i].location==loc)
-    { 
+          var tr = document.createElement('div');
+          tr.className = "row";
+          var td = document.createElement('div');
+          td.className = "col-md-12 WshopTd";
 
-   var td = document.createElement('div');
-            td.className="col-md-6 WshopTd";
+          for (j = 0; j < parseInt(data[i].rate); j++)
+            rate += "<i class='fa fa-star rate'></i>"
+          if (data[i].rate % 1 != 0) {
+            rate += "<i class='fa fa-star-half-empty rate'></i>"
+            j++;
+          }
+          for (j; j < 5; j++)
+            rate += "<i class='fa fa-star-o rate'></i>"
 
-            for( j =0 ; j<parseInt( data[i].rate);j++)
-              rate+="<i class='fa fa-star rate'></i>"
-              if(data[i].rate % 1 != 0){
-              rate+="<i class='fa fa-star-half-empty rate'></i>"
-              j++; }
-              for( j  ; j<5;j++)
-              rate+="<i class='fa fa-star-o rate'></i>"
+          td.innerHTML = "  <div class='card' style = ' max-width: 90% !important;'>   <div class='logo' style='background-image:" + data[i].icon + "'>  </div>   <div class='card-text'>   <div  class='portada' style='background-image:" + data[i].image + "'>   </div>  <div class='title-total'>  <div class='title'>" + rate + " </div><div class='row'> <div class='col-sm-6 pleft'>  <h2>" + data[i].name + " </h2>   <div class='address' ><i class='fas fa-building icolor'> </i> &nbsp; " + data[i].address + "</div> <div class='phone' > <i class='fas  fa-mobile-alt	 icolor'> </i> &nbsp;"+ data[i].phonenumber +  "</div> </div> <div class='col-sm-6 rcorner'> <br>  <div> <i class='fas  fa-snowplow	 icolor'> </i> &nbsp; Winch service   </div>  <div> <i class='fas  fa-mobile-alt	 icolor'> </i> &nbsp;  &nbsp; Urgent <span> immediate </span>maintenance  service  </div>  </div>     </div>  </div>     </div>    ";
 
-td.innerHTML = "  <div class='card'>   <div class='logo' style='background-image:" + data[i].icon+"'>  </div>   <div class='card-text'>   <div  class='portada' style='background-image:"+data[i].image+"'>   </div>  <div class='title-total'>  <div class='title'>" + rate +                     " </div>  <h2>"+data[i].name+" </h2>    <div class='address'> "+data[i].address+"</div> <div class='actions mt-auto btn'> <label id='lbphone"+i+"'class='phonelb'></label>   <button class='wsbtn' id='" + data[i].id+"'><div id='lbphone"+i+"' onclick='document.getElementById('lbphone"+i+"').innerHTML="+data[i].phonenumber+"></div><div  >phone number</div></button>     </div>     </div>  </div>     </div>    ";
+          tr.appendChild(td);
 
-tr.appendChild(td);
+          document.getElementById("workShops").appendChild(tr);
+        }
 
-document.getElementById("workShops").appendChild(tr);}
-   
-cnt++;}
-});
+        cnt++;
+      }
+    }
+    );
   }
 
   loadData();
-  
+
   console.log(localStorage);
-  </script>
+</script>
+
 </html>

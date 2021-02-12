@@ -158,6 +158,7 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
+  width: 100%;
 }
 
 .card .title-total {
@@ -185,7 +186,7 @@ body {
   font-size: 0.938rem;
   color: #d89216;
   cursor: pointer;
-  padding: 0.313rem;
+  padding: 0.5rem;
   margin-bottom: auto;
 }
 
@@ -193,6 +194,7 @@ body {
   position: absolute;
   right: 1.5rem;
   bottom: 1.5rem;
+  border-radius: 1.563rem;
 }
 
 .card .rate {
@@ -233,7 +235,7 @@ body {
 .box select {
   background-color: #d89216;
   color: white;
-  border-radius: 2.5rem;
+  border-radius: 1.563rem;
   padding: 0.625rem;
   width: 15.625rem;
   border: none;
@@ -476,4 +478,40 @@ body {
 /***********************************
 *   login page style 
 ***********************************/
+.emergancy .card {
+  min-width: 88%;
+}
+
+.emergancy .logo {
+  left: 30%;
+}
+
+.emergancy .card .rate {
+  font-size: 1.3rem;
+}
+
+.emergancy .phone, .emergancy .rcorner {
+  padding: 0rem 1rem;
+  font-size: 0.938rem;
+  line-height: 2rem;
+}
+
+.emergancy .rcorner span {
+  color: #8c0909;
+}
+
+.emergancy .icolor {
+  color: #d89216;
+  font-size: 1rem;
+}
+
+.emergancy .pleft {
+  border-right: 0.16rem solid #d89216;
+}
+
+.emergancy .WshopTd {
+  margin-top: 8rem;
+  margin-bottom: 0%;
+  height: 12rem;
+}
 /*# sourceMappingURL=main.css.map */
