@@ -15,7 +15,14 @@
 'layout/footer';
 // 5. Components
 @import 'components/button';
+
 // 6. Page-specific styles
+@import 'pages/Error';
 @import 'pages/home';
+@import 'pages/SingleWarsha';
+@import 'pages/singleWarshAdmin';
+@import 'pages/update';
+
 // 7. Themes
 @import 'themes/default';
+
