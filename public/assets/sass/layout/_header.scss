@@ -1,22 +1,24 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-body {
-  overflow-x: hidden;
-}
 
-.header {
+
+.header--main {
   width: 100%;
   position: fixed;
   display: flex;
   background-color: $secondary;
   z-index: 1001;
+  height: 73px;
 
   .header--logo {
     flex: 2;
+    display: flex;
+    align-items: center;
 
-    img {
+    h1 {
       padding: 3px 10px;
+      color: white;
     }
   }
 
@@ -31,9 +33,18 @@ body {
     margin-bottom: 0;
 
     .header--menu--item {
-
       font-size: large;
       font-weight: bold;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: $primary;
+          text-decoration: underline;
+        }
+      }
     }
   }
 
@@ -42,12 +53,26 @@ body {
     font-size: large;
     font-weight: bold;
     margin-right: 15px;
-    color: white;
 
-    .header--signin i {
-      margin-right: 15px;
+    a {
       color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+        text-decoration: underline;
+      }
+
+      i {
+        margin-right: 7px;
+        color: white;
+
+        &:hover {
+          color: $primary;
+        }
+      }
     }
+
   }
 
   .collaps {
@@ -87,7 +112,10 @@ body {
       transform: translateX(-120px);
     }
   }
+
+
 }
+
 
 
 @media screen and (max-width: 900px) {

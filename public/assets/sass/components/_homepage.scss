@@ -1,11 +1,15 @@
-.slide {
+
+.body--home {
+  overflow-x: hidden;
+  background-color: white;
+}
+
+.slid {
   height: 100vh;
 
-  .carousel-indicators {
+  .slid--node {
     padding: 15px;
-
-    transform: translate(10%, 55%);
-
+    transform: translate(10%, 100%);
 
     .node--slider {
       background: $primary;
@@ -117,7 +121,8 @@
         }
       }
     }
-    .row{
+
+    .row {
       width: 100%;
     }
 
@@ -344,12 +349,14 @@
             font-size: 1rem;
             color: #8c0909;
           }
+
           .checked {
             color: orange;
           }
-        
+
         }
       }
+
       .btn {
         background-color: #d89216;
         margin: 20px;
