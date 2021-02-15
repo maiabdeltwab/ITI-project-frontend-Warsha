@@ -1,3 +1,132 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+
+.header--main {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  background-color: $secondary;
+  z-index: 1001;
+  height: 73px;
+
+  .header--logo {
+    flex: 2;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      padding: 3px 10px;
+      color: white;
+    }
+  }
+
+  .header--menu--items {
+    list-style: none;
+    display: flex;
+    flex: 2;
+    justify-content: space-evenly;
+    color: white;
+    align-items: center;
+
+    margin-bottom: 0;
+
+    .header--menu--item {
+      font-size: large;
+      font-weight: bold;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: $primary;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .header--signin {
+    align-self: center;
+    font-size: large;
+    font-weight: bold;
+    margin-right: 15px;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+        text-decoration: underline;
+      }
+
+      i {
+        margin-right: 7px;
+        color: white;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+
+  }
+
+  .collaps {
+    align-self: center;
+    margin-right: 15px;
+    position: relative;
+    display: none;
+
+    .collaps-icon {
+      background: white;
+      width: 35px;
+      height: 5px;
+      margin-bottom: 7px;
+    }
+
+    .collaps--menu {
+      position: absolute;
+      top: 100%;
+      background-color: $secondary;
+      transition: 1s all;
+      transform: translateX(120px);
+      z-index: 1001;
+
+      .collaps--items {
+
+        text-align: center;
+        padding: 25px;
+
+        .collaps--item {
+          padding: 25px;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .appered {
+      transform: translateX(-120px);
+    }
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 900px) {
+  .header {
+
+    .disapperd {
+      display: none;
+    }
+
+    .collaps {
+      display: block;
+    }
+  }
+}
