@@ -61,6 +61,7 @@ button:focus {
 body {
   color: #171616;
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background-color: #f4f4f4;
 }
 
 /**
@@ -1008,7 +1009,187 @@ footer .footer--btn i {
 }
 
 .EditService .UpdateService {
-  color: #3A3535;
+  color: #3A3535;}
+.card {
+  font-family: Roboto, sans-serif;
+  background: #fff;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0rem 10.875rem 5rem rgba(36, 37, 68, 0.1);
+          box-shadow: 0rem 10.875rem 5rem rgba(36, 37, 68, 0.1);
+  max-width: 37.5rem;
+  border-radius: 1.563rem;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card h2 {
+  display: block;
+  font-size: 1.5rem;
+  -webkit-margin-before: 0.83rem;
+          margin-block-start: 0.83rem;
+  -webkit-margin-after: 0.83rem;
+          margin-block-end: 0.83rem;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.card .title {
+  padding: 1rem;
+  text-align: right;
+  color: #D89216;
+  font-weight: bold;
+  font-size: 0.813rem;
+}
+
+.card .address {
+  padding: 0.5rem 1rem;
+  font-size: 0.938rem;
+}
+
+.card .actions {
+  text-align: right;
+}
+
+.card svg {
+  width: 5.313rem;
+  height: 5.313rem;
+  margin: 0 auto;
+}
+
+.card .card-text {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  width: 100%;
+}
+
+.card .title-total {
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  min-height: 270;
+}
+
+.card .portada {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+}
+
+.card .phonelb {
+  color: #8c0909;
+  padding: 0.313rem;
+}
+
+.card button {
+  border: 0.063rem #d89216 solid;
+  background: none;
+  font-size: 0.938rem;
+  color: #d89216;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-bottom: auto;
+}
+
+.card .wsbtn {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  border-radius: 1.563rem;
+}
+
+.card .rate {
+  font-size: 1.1rem;
+  margin: .15rem;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  border-radius: 50%;
+  border: 6px solid #F4F4F4;
+  top: 11%;
+  left: 26.5%;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+
+.WshopTd {
+  margin-bottom: 3.8rem;
+  float: left;
+  width: 40.625rem;
+  height: 15rem;
+}
+
+.WshopTd .col-md-6 {
+  padding-right: -1.5%;
+  padding-left: 2rem !important;
+}
+
+.box {
+  display: inline;
+  font: 25rem 0.833rem Arial;
+  text-align: center;
+}
+
+.box select {
+  background-color: #d89216;
+  color: white;
+  border-radius: 1.563rem;
+  padding: 0.625rem;
+  width: 15.625rem;
+  border: none;
+  font-size: 0.938rem;
+  font-size: large;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+       appearance: button;
+  outline: none;
+  text-align: center;
+  margin-left: 5rem;
+  margin-bottom: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.box::before {
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.75rem;
+  line-height: 2.813rem;
+  pointer-events: none;
+}
+
+.box:hover option {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #faac24;
+}
+
+.box select option {
+  padding: 1rem;
+}
+
+.workShops .row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+.workShops .col-md-6 {
+  padding-left: 2rem !important;
 }
 
 /***********************************
@@ -1207,4 +1388,40 @@ footer .footer--btn i {
 /***********************************
 *   login page style 
 ***********************************/
+.emergancy .card {
+  min-width: 88%;
+}
+
+.emergancy .logo {
+  left: 30%;
+}
+
+.emergancy .card .rate {
+  font-size: 1.3rem;
+}
+
+.emergancy .phone, .emergancy .rcorner {
+  padding: 0rem 1rem;
+  font-size: 0.938rem;
+  line-height: 2rem;
+}
+
+.emergancy .rcorner span {
+  color: #8c0909;
+}
+
+.emergancy .icolor {
+  color: #d89216;
+  font-size: 1rem;
+}
+
+.emergancy .pleft {
+  border-right: 0.16rem solid #d89216;
+}
+
+.emergancy .WshopTd {
+  margin-top: 8rem;
+  margin-bottom: 0%;
+  height: 12rem;
+}
 /*# sourceMappingURL=main.css.map */
