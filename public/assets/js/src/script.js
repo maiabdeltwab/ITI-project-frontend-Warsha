@@ -1,103 +1,4 @@
 
-
-// var obj = [
-//     {
-//         "id": 1,
-//         "location": "Fayoum",
-//         "name": "The local work shop",
-//         "phonenumber": "010234938532",
-//         "rate": 4,
-//         "address": "Egpy - ElFayoum , Mesala street behind Rosana Resturant Below ElSeha Clinic",
-//         "image": "url('/resources/workShop1.jpg')",
-//         "icon": "url('/resources/workShop3.jpg')"
-//     },
-//     {
-//         "id": 2,
-//         "location": "Itsa",
-//         "name": "The Race work shop",
-//         "phonenumber": "010555638510",
-//         "rate": 2,
-//         "address": "Egpy - Itsa , family street after zad bank the third house at the left side ",
-//         "image": "url('/resources/workShop2.jpg')",
-//         "icon": "url('/resources/workShop4.jpg')"
-//     },
-//     {
-//         "id": 3,
-//         "location": "Maadi",
-//         "name": "The Bos work shop",
-//         "phonenumber": "010234938532",
-//         "rate": 2,
-//         "address": "Egpy - Maadi ,family street after zad bank the third house at the left side ",
-//         "image": "url('/resources/workShop5.jpg')",
-//         "icon": "url('/resources/workShop2.jpg')"
-//     },
-//     {
-//         "id": 4,
-//         "location": "Mohandesen",
-//         "name": "The Race work shop",
-//         "phonenumber": "010555638510",
-//         "rate": 2,
-//         "address": "Egpy - Mohandesen ,  Mesala street behind Rosana Resturant Below ElSeha Clinic ",
-//         "image": "url('/resources/workShop4.jpg')",
-//         "icon": "url('/resources/workShop2.jpg')"
-//     },
-
-//     {
-//         "id": 5,
-//         "location": "Fayoum",
-//         "name": "The local work shop",
-//         "phonenumber": "010234938532",
-//         "rate": 4,
-//         "address": "Egpy - ElFayoum , Mesala street behind Rosana Resturant Below ElSeha Clinic",
-//         "image": "url('/resources/workShop2.jpg')",
-//         "icon": "url('/resources/workShop3.jpg')"
-//     },
-//     {
-//         "id": 6,
-//         "location": "Itsa",
-//         "name": "The Race work shop",
-//         "phonenumber": "010555638510",
-//         "rate": 2,
-//         "address": "Egpy - Itsa , family street after zad bank the third house at the left side ",
-//         "image": "url('/resources/workShop3.jpg')",
-//         "icon": "url('/resources/workShop5.jpg')"
-//     },
-
-//     {
-//         "id": 7,
-//         "location": "Damares",
-//         "name": "Master work shop",
-//         "phonenumber": "010938532145",
-//         "rate": 2,
-//         "address": "Egpy - Minya ,family street after zad bank the third house at the left side ",
-//         "image": "url('/resources/workShop4.jpg')",
-//         "icon": "url('/resources/workShop1.jpg')"
-//     },
-//     {
-//         "id": 8,
-//         "location": "Minya",
-//         "name": "The Bos work shop",
-//         "phonenumber": "010555638510",
-//         "rate": 5,
-//         "address": "Egpy - Minya ,  Mesala street behind Rosana Resturant Below ElSeha Clinic ",
-//         "image": "url('/resources/workShop2.jpg')",
-//         "icon": "url('/resources/workShop3.jpg')"
-//     }
-// ];
-// // console.log(obj[3].name);
-// window.onload = function () {
-//     btnservice.style.color = "#8c0909";
-//     btnservice.style.fontWeight = "bolder";
-//     var dis = document.getElementById("commentsbox");
-//     dis.style.display = "none";
-//     var id =  parseInt(window.location.href.split('=')[1]) - 1;;
-
-//     document.getElementById("workshopName").innerHTML = obj[id].name;
-//     document.getElementById("workshopPhone").innerHTML = obj[id].phonenumber;
-//     document.getElementById("workshopAddress").innerHTML = obj[id].address;
-//     document.getElementById("workshopRate").innerHTML = obj[id].rate;
-
-// }
 ////////from here
 var name = localStorage.getItem('firstName') + " " + localStorage.getItem('lastName');
 var done;
@@ -148,8 +49,8 @@ post = () => {
         flexdiv.className = "row";
 
         var warshImage = document.createElement('img');
-        warshImage.src = 'assets/images/Myprofile.jpeg';
-        warshImage.classList.add('mt-3', 'rounded-circle', 'clientImage', 'ml-1');
+        warshImage.src = 'assets/images/img_avatar3.png';
+        warshImage.classList.add('mt-3', 'rounded-circle', 'clientImage', 'ml-3');
         //
         var mediaBody = document.createElement("div");
         mediaBody.classList.add('media-body', 'pl-3', 'mt-3', 'userInfo');
@@ -209,8 +110,14 @@ post = () => {
     }
 
 }
-
 AddServices = () => {
+
+    var service = document.getElementById("warshaService").value;
+    var price = document.getElementById("servicePrice").value;
+    var thanking = document.getElementById("Thanks")
+
+if(service&&price&&price>0)
+{
     var LInode = document.createElement("li");
     LInode.dataset.target = "#demo";
     LInode.className = "Warshacircle";
@@ -226,19 +133,68 @@ AddServices = () => {
     carousalITem.appendChild(cardeck);
 
     var cardService = document.createElement("div");
-    cardService.classList.add('card','cardService')
+    cardService.classList.add('card', 'cardService')
 
     cardeck.appendChild(cardService);
 
+
     var cardBody = document.createElement("div");
-    cardBody.classList.add= ('card-body','text-center');
+    cardBody.classList.add('card-body', 'text-center');
     //span in awl div
     var serviceNameSpan = document.createElement("span");
+    var srvNameNode = document.createTextNode(service);
+
     serviceNameSpan.classList.add('serviceName');
+    serviceNameSpan.appendChild(srvNameNode);
+
+
+    var priceSpan = document.createElement('span');
+    var priceNode = document.createTextNode(price);
+    priceSpan.className = "price";
+    var br = document.createElement('br');
+    var br2 = document.createElement('br');
+    var br3 = document.createElement('br');
+    var br4 = document.createElement('br');
+
+    var sup = document.createElement('sup');
+    var supvalue = document.createTextNode("$");
+    sup.appendChild(supvalue);
+    sup.style.color = "#064acb";
+    priceSpan.appendChild(priceNode);
+
+    var serviceImage = document.createElement('img');
+    serviceImage.src = 'assets/images/pexels-photo-2244746.jpeg';
+    serviceImage.classList.add('img-thumbnail', 'priceImage');
+
+    var servicebutton = document.createElement('button');
+    
+    servicebutton.classList.add('btn','btn-secondary','AddToCard','row');
+    servicebutton.innerHTML = "Edit Service"; 
     cardBody.appendChild(serviceNameSpan);
+    cardBody.appendChild(br);
+     cardBody.appendChild(sup)
+     cardBody.appendChild(priceSpan);
+      cardBody.appendChild(br2);
+     cardBody.appendChild(serviceImage);
+     cardBody.appendChild(br3);
+     cardBody.appendChild(br4);
+     cardBody.appendChild(servicebutton);
+
     cardService.appendChild(cardBody);
 
     service_price.appendChild(carousalITem);
+ thanking.innerHTML="Service added successfully"   ;
+ document.getElementById("warshaService").readOnly = true;
+ document.getElementById("servicePrice").readOnly = true;
+
+
+
+}
+else
+{
+ thanking.innerHTML="Please add service and price"   ;
+
+}
 }
 
 

@@ -1623,7 +1623,8 @@ html {
 }
 
 .clientFeedback .clientImage {
-  width: 80px;
+  width: 75px;
+  height: 70px;
 }
 
 .clientFeedback .userComment {
