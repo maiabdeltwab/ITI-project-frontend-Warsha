@@ -5,7 +5,6 @@
 body {
     color: $text-dark;
     font: normal 125% / 1.4 $text-font-stack;
-    background-color: $light;
 }
 
 
@@ -14,6 +13,6 @@ body {
 **/
 
 .mark {
-  background-color: $secondary;
-  color: $text-light;
+    background-color: $secondary;
+    color: $text-light;
 }

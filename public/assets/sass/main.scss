@@ -14,22 +14,11 @@
 @import 'layout/header',
 'layout/footer';
 // 5. Components
-@import 'components/button',
-'components/homepage';
 @import 'components/button';
-@import 'components/card';
 // 6. Page-specific styles
-@import 'pages/Error';
 @import 'pages/home';
-@import 'pages/SingleWarsha';
-@import 'pages/singleWarshAdmin';
-@import 'pages/update';
-@import 'pages/WorkShops';
 @import 'pages/signup';
 @import 'pages/login';
 @import 'pages/profile';
-@import'pages/emergancy';
-// 7. Themes
-@import 'themes/default';
 // 7. Themes
 @import 'themes/default';
