@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Work Shops</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" src="Data.json"></script>
+</head>
+
+<body>
+  <div class="workShops">
+      <form action="#">
+       <div class="row">
+          <div class="col-sm-6">
+            
+              <div class="box dropdown">
+                <select id="select-box1" required onchange="filterCity()">
+                  <option value="all" disabled selected>Select Your city</option>
+                  <option value="fayoum">Fayoum</option>
+                  <option value="minya">Minia</option>
+                  <option value="giza">Giza</option>
+                  <option value="cairo">Cairo</option>
+                </select>
+              </div>
+            
+          </div>
+         
+          <div class="col-sm-6">
+            
+              <div class="box dropdown">
+                <select id="select-box2" required onchange="filterLoction()">
+                  <option value="all" disabled selected>Select Your Location</option>
+                  <option value="itsa">Itsa</option>
+                  <option value="fayoum">Fayoum</option>
+                  <option value="damares">Damares</option>
+                  <option value="minya">Minya</option>
+                  <option value="giza">Giza</option>
+                  <option value="maadi">Maadi</option>
+                  <option value="mohandesen">Mohandesen</option>
+                </select>
+              </div>
+          </div>
+       </div>
+      </form>
+  </div>
+
+  <div class="container-fluid workShops" id="workShops">
+    
+  </div>
+      
+
+  <script src="assets/js/vendor/jquery-slim.min.js"></script>
+  <script src="assets/js/vendor/popper.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+   <script src="assets/js/src/workShops.js"></script>
+
+ 
+</body>
+
+</html>
