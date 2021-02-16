@@ -12,23 +12,24 @@
 'base/helpers';
 // 4. Layout-related sections
 @import 'layout/header',
-'layout/footer'; 
-
+'layout/footer';
 // 5. Components
 @import 'components/button',
 'components/homepage';
-
+@import 'components/button';
+@import 'components/card';
 // 6. Page-specific styles
 @import 'pages/Error';
 @import 'pages/home';
 @import 'pages/SingleWarsha';
 @import 'pages/singleWarshAdmin';
 @import 'pages/update';
-
-// 7. Themes
-@import 'themes/default';
-
+@import 'pages/WorkShops';
 @import 'pages/signup';
 @import 'pages/login';
+@import 'pages/profile';
+@import'pages/emergancy';
+// 7. Themes
+@import 'themes/default';
 // 7. Themes
 @import 'themes/default';

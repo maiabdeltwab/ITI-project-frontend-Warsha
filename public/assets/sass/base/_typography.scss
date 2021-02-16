@@ -2,9 +2,10 @@
  * Basic typography style for copy text
  */
 
- body {
-  color: $text-dark;
-  font: normal 125% / 1.4 $text-font-stack;
+body {
+    color: $text-dark;
+    font: normal 125% / 1.4 $text-font-stack;
+    background-color: $light;
 }
 
 
