@@ -1,5 +1,6 @@
 var data;
-var rate = "", j = 0;
+var rate = "",
+    j = 0;
 var i = 0;
 // function readTextFile(file, callback) {
 //     var rawFile = new XMLHttpRequest();
@@ -57,7 +58,7 @@ function loadData() {
             for (j; j < 5; j++)
                 rate += "<i class='fa fa-star-o rate'></i>"
 
-            td.innerHTML = "                      <div class='card '>  <div class='logo' style='background-image:" + data.icon + "'>    </div>   <div class='card-text'>   <div class='portada' style='background-image:" + data.image + "'>   </div>  <div class='title-total'>            <div class='title'>" + rate + "                             </div>  <h2>" + data.name + " </h2>    <div class='address'> " + data.address + "</div>   <div class='actions mt-auto btn'> <button class='wsbtn' id=' " + data.id + "'> <div>Show more</div>  </button>     </div>     </div>  </div>     </div>";
+            td.innerHTML = "<div class='card '>  <div class='logo' style='background-image:" + data.icon + "'>    </div>   <div class='card-text'>   <div class='portada' style='background-image:" + data.image + "'>   </div>  <div class='title-total'>            <div class='title'>" + rate + "                             </div>  <h2>" + data.name + " </h2>    <div class='address'> " + data.address + "</div>   <div class='actions mt-auto btn'> <button onclick='load(this);' class='wsbtn' id=' " + data.id + "'> <div>Show more</div>  </button>     </div>     </div>  </div>     </div>";
             tr.appendChild(td);
             if (i % 2 == 1) {
                 document.getElementById("workShops").appendChild(tr);
@@ -106,7 +107,7 @@ function filterCity() {
             for (j; j < 5; j++)
                 rate += "<i class='fa fa-star-o rate'></i>"
 
-            td.innerHTML = "  <div class='card'>   <div class='logo' style='background-image:" + data.icon + "'>    </div>   <div class='card-text'>   <div  class='portada' style='background-image:" + data.image + "'>   </div>  <div class='title-total'>  <div class='title'>" + rate + " </div>  <h2>" + data.name + " </h2>    <div class='address'> " + data.address + "</div>  <div class='actions mt-auto btn'>    <button class='wsbtn' id='" + data.id + " .btn'><div  >Show more</div></button>     </div>     </div>  </div>     </div>    ";
+            td.innerHTML = "  <div class='card'>   <div class='logo' style='background-image:" + data.icon + "'>    </div>   <div class='card-text'>   <div  class='portada' style='background-image:" + data.image + "'>   </div>  <div class='title-total'>  <div class='title'>" + rate + " </div>  <h2>" + data.name + " </h2>    <div class='address'> " + data.address + "</div>  <div class='actions mt-auto btn'>    <button class='wsbtn' onclick='load(this);' id='" + data.id + " .btn'><div  >Show more</div></button>     </div>     </div>  </div>     </div>    ";
 
             tr.appendChild(td);
             if (cnt % 2 == 1) {
@@ -155,7 +156,7 @@ function filterLoction() {
             for (j; j < 5; j++)
                 rate += "<i class='fa fa-star-o rate'></i>"
 
-            td.innerHTML = "  <div class='card'>   <div class='logo' style='background-image:" + data.icon + "'>    </div>   <div class='card-text'>   <div  class='portada' style='background-image:" + data.image + "'>   </div>  <div class='title-total'>  <div class='title'>" + rate + " </div>  <h2>" + data.name + " </h2>    <div class='address'> " + data.address + "</div>  <div class='actions mt-auto btn'>    <button class='wsbtn' id='" + data.id + "'><div  >Show more</div></button>     </div>     </div>  </div>     </div>    ";
+            td.innerHTML = "  <div class='card'>   <div class='logo' style='background-image:" + data.icon + "'>    </div>   <div class='card-text'>   <div  class='portada' style='background-image:" + data.image + "'>   </div>  <div class='title-total'>  <div class='title'>" + rate + " </div>  <h2>" + data.name + " </h2>    <div class='address'> " + data.address + "</div>  <div class='actions mt-auto btn'>    <button class='wsbtn' onclick='load(this);' id='" + data.id + "'><div  >Show more</div></button>     </div>     </div>  </div>     </div>    ";
             tr.appendChild(td);
 
             document.getElementById("workShops").appendChild(tr);

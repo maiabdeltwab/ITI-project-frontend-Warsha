@@ -203,9 +203,26 @@ function btnAdd() {
             workshopnumbre: wsWorkshopNumbre,
         })
         .then((docRef) => {
-            console.log("Document written with ID: ", docRef.id);
+            location.href = "/public/SingleWarsha.html"
         })
         .catch((error) => {
             console.error("Error adding document: ", error);
         });
 }
+
+
+function request() {
+
+    var username = sessionStorage.username;
+    if (username) {
+        document.location = 'workShops.html'
+    } else {
+        document.location = 'signup.html'
+    }
+}
+
+
+$('#submit').click(function() {
+    var location = $('.city2').children("option:selected").val();
+    document.location = '/public/emergancy.html?location=' + location;
+});

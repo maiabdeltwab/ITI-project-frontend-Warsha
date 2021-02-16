@@ -1,6 +1,5 @@
-
 ////////from here
-var name = localStorage.getItem('firstName') + " " + localStorage.getItem('lastName');
+var name = sessionStorage.getItem('username');
 var done;
 post = () => {
     var review = document.getElementById("txtArea").value;
@@ -90,21 +89,17 @@ post = () => {
 
 
 
-    }
-    else if (done == 0) {
+    } else if (done == 0) {
 
         thanking.innerHTML = "Your Review have been already Recorded";
 
-    }
-    else if (review) {
+    } else if (review) {
         thanking.innerHTML = "Please Rate our Services";
 
-    }
-    else if (starValue) {
+    } else if (starValue) {
         thanking.innerHTML = "Please Write your Review";
 
-    }
-    else {
+    } else {
         thanking.innerHTML = "Please Write your Review and Rate our Services";
 
     }
@@ -116,85 +111,82 @@ AddServices = () => {
     var price = document.getElementById("servicePrice").value;
     var thanking = document.getElementById("Thanks")
 
-if(service&&price&&price>0)
-{
-    var LInode = document.createElement("li");
-    LInode.dataset.target = "#demo";
-    LInode.className = "Warshacircle";
-    LInode.setAttribute('data-slide-to', 3);
-    document.getElementById("serviceList").appendChild(LInode);
-    var service_price = document.getElementById("service_price");
-    var carousalITem = document.createElement("div");
-    carousalITem.classList.add('WarshaCurosal', 'carousel-item');
+    if (service && price && price > 0) {
+        var LInode = document.createElement("li");
+        LInode.dataset.target = "#demo";
+        LInode.className = "Warshacircle";
+        LInode.setAttribute('data-slide-to', 3);
+        document.getElementById("serviceList").appendChild(LInode);
+        var service_price = document.getElementById("service_price");
+        var carousalITem = document.createElement("div");
+        carousalITem.classList.add('WarshaCurosal', 'carousel-item');
 
 
-    var cardeck = document.createElement("div");
-    cardeck.className = "card-deck";
-    carousalITem.appendChild(cardeck);
+        var cardeck = document.createElement("div");
+        cardeck.className = "card-deck";
+        carousalITem.appendChild(cardeck);
 
-    var cardService = document.createElement("div");
-    cardService.classList.add('card', 'cardService')
+        var cardService = document.createElement("div");
+        cardService.classList.add('card', 'cardService')
 
-    cardeck.appendChild(cardService);
-
-
-    var cardBody = document.createElement("div");
-    cardBody.classList.add('card-body', 'text-center');
-    //span in awl div
-    var serviceNameSpan = document.createElement("span");
-    var srvNameNode = document.createTextNode(service);
-
-    serviceNameSpan.classList.add('serviceName');
-    serviceNameSpan.appendChild(srvNameNode);
+        cardeck.appendChild(cardService);
 
 
-    var priceSpan = document.createElement('span');
-    var priceNode = document.createTextNode(price);
-    priceSpan.className = "price";
-    var br = document.createElement('br');
-    var br2 = document.createElement('br');
-    var br3 = document.createElement('br');
-    var br4 = document.createElement('br');
+        var cardBody = document.createElement("div");
+        cardBody.classList.add('card-body', 'text-center');
+        //span in awl div
+        var serviceNameSpan = document.createElement("span");
+        var srvNameNode = document.createTextNode(service);
 
-    var sup = document.createElement('sup');
-    var supvalue = document.createTextNode("$");
-    sup.appendChild(supvalue);
-    sup.style.color = "#064acb";
-    priceSpan.appendChild(priceNode);
-
-    var serviceImage = document.createElement('img');
-    serviceImage.src = 'assets/images/pexels-photo-2244746.jpeg';
-    serviceImage.classList.add('img-thumbnail', 'priceImage');
-
-    var servicebutton = document.createElement('button');
-    
-    servicebutton.classList.add('btn','btn-secondary','AddToCard','row');
-    servicebutton.innerHTML = "Edit Service"; 
-    cardBody.appendChild(serviceNameSpan);
-    cardBody.appendChild(br);
-     cardBody.appendChild(sup)
-     cardBody.appendChild(priceSpan);
-      cardBody.appendChild(br2);
-     cardBody.appendChild(serviceImage);
-     cardBody.appendChild(br3);
-     cardBody.appendChild(br4);
-     cardBody.appendChild(servicebutton);
-
-    cardService.appendChild(cardBody);
-
-    service_price.appendChild(carousalITem);
- thanking.innerHTML="Service added successfully"   ;
- document.getElementById("warshaService").readOnly = true;
- document.getElementById("servicePrice").readOnly = true;
+        serviceNameSpan.classList.add('serviceName');
+        serviceNameSpan.appendChild(srvNameNode);
 
 
+        var priceSpan = document.createElement('span');
+        var priceNode = document.createTextNode(price);
+        priceSpan.className = "price";
+        var br = document.createElement('br');
+        var br2 = document.createElement('br');
+        var br3 = document.createElement('br');
+        var br4 = document.createElement('br');
 
-}
-else
-{
- thanking.innerHTML="Please add service and price"   ;
+        var sup = document.createElement('sup');
+        var supvalue = document.createTextNode("$");
+        sup.appendChild(supvalue);
+        sup.style.color = "#064acb";
+        priceSpan.appendChild(priceNode);
 
-}
+        var serviceImage = document.createElement('img');
+        serviceImage.src = 'assets/images/pexels-photo-2244746.jpeg';
+        serviceImage.classList.add('img-thumbnail', 'priceImage');
+
+        var servicebutton = document.createElement('button');
+
+        servicebutton.classList.add('btn', 'btn-secondary', 'AddToCard', 'row');
+        servicebutton.innerHTML = "Edit Service";
+        cardBody.appendChild(serviceNameSpan);
+        cardBody.appendChild(br);
+        cardBody.appendChild(sup)
+        cardBody.appendChild(priceSpan);
+        cardBody.appendChild(br2);
+        cardBody.appendChild(serviceImage);
+        cardBody.appendChild(br3);
+        cardBody.appendChild(br4);
+        cardBody.appendChild(servicebutton);
+
+        cardService.appendChild(cardBody);
+
+        service_price.appendChild(carousalITem);
+        thanking.innerHTML = "Service added successfully";
+        document.getElementById("warshaService").readOnly = true;
+        document.getElementById("servicePrice").readOnly = true;
+
+
+
+    } else {
+        thanking.innerHTML = "Please add service and price";
+
+    }
 }
 
 
@@ -204,7 +196,7 @@ let showValue = document.querySelector('#rating-value');
 console.log(star.length);
 var starValue;
 for (let i = 0; i < star.length; i++) {
-    star[i].addEventListener('click', function () {
+    star[i].addEventListener('click', function() {
         // i = this.value;
         starValue = this.value;
     });
