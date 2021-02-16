@@ -17,10 +17,40 @@
 
 
     <div class="singleWarsha">
-        <br>
+        <header>
+            <div class="header--main">
+                <div class="header--logo">
+                    <h1>Warsha</h1>
+                </div>
+
+                <ul class="header--menu--items disapperd">
+                    <li class="header--menu--item"><a href="home page.html">Home</a></li>
+                    <li class="header--menu--item"><a href="#">About Us</a></li>
+                    <li class="header--menu--item"><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="header--signin">
+                    <a href="#"><i class="fas fa-user-circle"></i> Sign in</a>
+                </div>
+                <div class="collaps">
+                    <div class="collaps--sign">
+                        <div class="collaps-icon"></div>
+                        <div class="collaps-icon"></div>
+                        <div class="collaps-icon"></div>
+                    </div>
+                    <div class="collaps--menu">
+                        <ul class="collaps--items">
+                            <li class="collaps--item"><a href="home page.html">Home</a></li>
+                            <li class="collaps--item"><a href="#">About Us</a></li>
+                            <li class="collaps--item"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
 
 
-        <div class="container-fluid searchDiv">
+        <div class="container-fluid searchDiv" style="margin-top: 60px;">
 
             <div class="row p-2">
 
@@ -51,23 +81,28 @@
 
             <div class="container-fluid">
                 <div class="row d-md-flex justify-content-end">
-                    <div class="col-xl-6 col-md-6 warshaimg"
-                        style="background-image: url(assets/images/workShop5.jpg);">
+                    <div class="col-xl-6 col-md-6 warshaimg" id="shopimg">
 
                     </div>
-                    <div class="col-md-6 col-xl-6 p-3 py-5 pl-lg-5" >
+                    <div class="col-md-6 col-xl-6 p-3 py-5 pl-lg-5">
 
 
 
-                        <h3 >About US</h3>
+                        <h3><span style="color: white;"> About</span> US</h3>
                         <br>
-                        <p><i class="fa fa-user-circle mr-2 warshaIcon" ></i>Name :
-                            The Bos work shop</p>
+                        <p><i class="fas fa-city mr-2 warshaIcon"></i>City :
+                            <span style="color: white;" id="warshaCity"> </span>
+                        </p>
+                        <p><i class="fa fa-user-circle mr-2 warshaIcon"></i>Name :
+                            <span style="color: white;" id="warshaName"> </span>
+                        </p>
                         <p><i class="fa fa-map-marker mr-2 warshaIcon "></i>Address
-                            : Egpy - Minya ,family street after zad bank the third house </p>
-                        <p><i class="fa fa-phone mr-2 warshaIcon" ></i>Phone :
-                            010555638510</p>
-                        <p><i class="fa fa-percent mr-2 warshaIcon" ></i>Rate : 4.5
+                            : <span style="color: white;" id="warshaAddress"> </span> </p>
+                        <p><i class="fa fa-phone mr-2 warshaIcon"></i>Phone :
+                            <span style="color: white;" id="warshaPhone"> </span>
+                        </p>
+                        <p><i class="fa fa-percent mr-2 warshaIcon"></i>Rate : <span style="color: white;"
+                                id="warshaRate"></span>
                         </p>
 
                     </div>
@@ -114,7 +149,8 @@
                                             <img src="assets/images/pexels-photo-2244746.jpeg"
                                                 class="img-thumbnail priceImage">
                                             <br><br>
-                                            <button class="btn btn-secondary AddToCard row" onclick="warshaCounte()">Add To
+                                            <button class="btn btn-secondary AddToCard row" onclick="warshaCounte()">Add
+                                                To
                                                 Card</button>
                                         </div>
                                     </div>
@@ -124,7 +160,8 @@
                                             <span class="price"><sup>$</sup> <span class="number">200</span></span><br>
                                             <img src="assets/images/oil-change.jpg" class="img-thumbnail priceImage">
                                             <br><br>
-                                            <button class="btn btn-secondary  AddToCard  row" onclick="warshaCounte()">Add
+                                            <button class="btn btn-secondary  AddToCard  row"
+                                                onclick="warshaCounte()">Add
                                                 To Card</button>
                                         </div>
                                     </div>
@@ -136,7 +173,8 @@
                                             <img src="assets/images/pexels-photo-279949.jpeg"
                                                 class="img-thumbnail priceImage ">
                                             <br><br>
-                                            <button class="btn btn-secondary   AddToCard row " onclick="warshaCounte()">Add
+                                            <button class="btn btn-secondary   AddToCard row "
+                                                onclick="warshaCounte()">Add
                                                 To Card</button>
                                         </div>
                                     </div>
@@ -154,7 +192,8 @@
                                             <img src="assets/images/pexels-photo-2244746.jpeg"
                                                 class="img-thumbnail priceImage">
                                             <br><br>
-                                            <button class="btn btn-secondary  AddToCard  row" onclick="warshaCounte()">Add
+                                            <button class="btn btn-secondary  AddToCard  row"
+                                                onclick="warshaCounte()">Add
                                                 To Card</button>
                                         </div>
                                     </div>
@@ -165,7 +204,8 @@
                                                     class="number">78.98</span></span><br>
                                             <img src="assets/images/oil-change.jpg" class="img-thumbnail priceImage">
                                             <br><br>
-                                            <button class="btn btn-secondary  AddToCard row " onclick="warshaCounte()">Add
+                                            <button class="btn btn-secondary  AddToCard row "
+                                                onclick="warshaCounte()">Add
                                                 To Card</button>
                                         </div>
                                     </div>
@@ -177,7 +217,8 @@
                                             <img src="assets/images/pexels-photo-279949.jpeg"
                                                 class="img-thumbnail priceImage">
                                             <br><br>
-                                            <button class="btn btn-secondary   AddToCard row " onclick="warshaCounte()">Add
+                                            <button class="btn btn-secondary   AddToCard row "
+                                                onclick="warshaCounte()">Add
                                                 To Card</button>
                                         </div>
                                     </div>
@@ -193,7 +234,8 @@
                                             <img src="assets/images/pexels-photo-2244746.jpeg"
                                                 class="img-thumbnail priceImage">
                                             <br><br>
-                                            <button class="btn btn-secondary  AddToCard  row" onclick="warshaCounte()">Add
+                                            <button class="btn btn-secondary  AddToCard  row"
+                                                onclick="warshaCounte()">Add
                                                 To Card</button>
                                         </div>
                                     </div>
@@ -204,7 +246,8 @@
                                                     class="number">78.98</span></span><br>
                                             <img src="assets/images/oil-change.jpg" class="img-thumbnail priceImage">
                                             <br><br>
-                                            <button class="btn btn-secondary   AddToCard row" onclick="warshaCounte()">Add
+                                            <button class="btn btn-secondary   AddToCard row"
+                                                onclick="warshaCounte()">Add
                                                 To Card</button>
                                         </div>
                                     </div>
@@ -216,7 +259,8 @@
                                             <img src="assets/images/pexels-photo-279949.jpeg"
                                                 class="img-thumbnail priceImage ">
                                             <br><br>
-                                            <button class="btn btn-secondary  AddToCard  row" onclick="warshaCounte()">Add
+                                            <button class="btn btn-secondary  AddToCard  row"
+                                                onclick="warshaCounte()">Add
                                                 To Card</button>
                                         </div>
                                     </div>
@@ -296,7 +340,7 @@
 
                                     <!-- Modal Header -->
                                     <div class="modal-header">
-                                        <h4 class="modal-title warshaModalName" >Warsha</h4>
+                                        <h4 class="modal-title warshaModalName">Warsha</h4>
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     </div>
 
@@ -349,9 +393,9 @@
                                             <span class="fa fa-quote-left commentIcon"></span>
                                         </div>
 
-                                        <div class="row"  style="display: flex;">
+                                        <div class="row" style="display: flex;">
                                             <img src="assets/images/Myprofile.jpeg"
-                                                class=" mt-3 ml-1 rounded-circle clientImage">
+                                                class=" mt-3 ml-3 rounded-circle clientImage">
                                             <div class="media-body pl-3 mt-3 userInfo">
 
                                                 <h5 class="userName">Abram Samir </h5>
@@ -373,7 +417,7 @@
                                         <div class="row" style="display: flex;">
 
                                             <img src="assets/images/Myprofile.jpeg"
-                                                class=" mt-3 ml-1 rounded-circle clientImage">
+                                                class=" mt-3 ml-3 rounded-circle clientImage">
                                             <div class="media-body pl-3 mt-3 userInfo">
 
                                                 <h5 class="userName">Abram Samir </h5>
@@ -397,7 +441,7 @@
                                         <div class="row" style="display: flex;">
 
                                             <img src="assets/images/Myprofile.jpeg"
-                                                class=" mt-3 ml-1 rounded-circle clientImage">
+                                                class=" mt-3 ml-3 rounded-circle clientImage">
                                             <div class="media-body pl-3 mt-3 userInfo">
 
                                                 <h5 class="userName">Abram Samir </h5>
@@ -425,7 +469,7 @@
                                         </div>
                                         <div class="row" style="display: flex;">
                                             <img src="assets/images/Myprofile.jpeg"
-                                                class=" mt-3 ml-1 rounded-circle clientImage">
+                                                class=" mt-3 ml-3 rounded-circle clientImage">
                                             <div class="media-body pl-3 mt-3 userInfo">
 
                                                 <h5 class="userName">Abram Samir </h5>
@@ -447,7 +491,7 @@
                                         <div class="row" style="display: flex;">
 
                                             <img src="assets/images/Myprofile.jpeg"
-                                                class=" mt-3 ml-1 rounded-circle clientImage">
+                                                class=" mt-3 ml-3 rounded-circle clientImage">
                                             <div class="media-body pl-3 mt-3 userInfo">
 
                                                 <h5 class="userName">Abram Samir </h5>
@@ -470,7 +514,7 @@
                                         <div class="row" style="display: flex;">
 
                                             <img src="assets/images/Myprofile.jpeg"
-                                                class=" mt-3 ml-1 rounded-circle clientImage">
+                                                class=" mt-3 ml-3 rounded-circle clientImage">
                                             <div class="media-body pl-3 mt-3 userInfo">
 
                                                 <h5 class="userName">Abram Samir </h5>
@@ -496,7 +540,7 @@
                                         </div>
                                         <div class="row" style="display: flex;">
                                             <img src="assets/images/Myprofile.jpeg"
-                                                class=" mt-3 ml-1 rounded-circle clientImage">
+                                                class=" mt-3 ml-3 rounded-circle clientImage">
                                             <div class="media-body pl-3 mt-3 userInfo">
 
                                                 <h5 class="userName">Abram Samir </h5>
@@ -518,7 +562,7 @@
                                         <div class="row" style="display: flex;">
 
                                             <img src="assets/images/Myprofile.jpeg"
-                                                class=" mt-3 ml-1 rounded-circle clientImage">
+                                                class=" mt-3 ml-3 rounded-circle clientImage">
                                             <div class="media-body pl-3 mt-3 userInfo">
 
                                                 <h5 class="userName">Abram Samir </h5>
@@ -541,7 +585,7 @@
                                         <div class="row" style="display: flex;">
 
                                             <img src="assets/images/Myprofile.jpeg"
-                                                class=" mt-3 ml-1 rounded-circle clientImage">
+                                                class=" mt-3 ml-3 rounded-circle clientImage">
                                             <div class="media-body pl-3 mt-3 userInfo">
 
                                                 <h5 class="userName">Abram Samir </h5>
@@ -557,7 +601,7 @@
                                             are very collaborator and help me in my Emergency. It is a good WorkShop
                                             they came on time </p>
                                     </div>
-                                    </div>
+                                </div>
 
 
                             </div>
@@ -568,6 +612,110 @@
 
         </section>
 
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="container">
+                            <div class="footer--logo--icon">
+                                <h1>Warsha</h1>
+                                <div class="footer--icons">
+                                    <a href="#" target="_blanck"><i class="fab fa-facebook-square"></i></a>
+                                    <a href="#" target="_blanck">
+                                        <i class="fab fa-twitter"></i></a>
+                                    <a href="#" target="_blanck">
+                                        <i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="footer--links">
+                                <div class="footer--frist--links">
+                                    <ul class="footer--frist--links--items">
+                                        <li class="footer--frist--links--item">
+                                            <a href="#">Home</a>
+                                        </li>
+                                        <li class="footer--frist--links--item">
+                                            <a href="#">Service </a>
+                                            <br />
+                                            <p class="sub--link sub"><a href="#">Emergancy</a></p>
+                                            <p class="sub--link"><a href="#">Request Repair</a></p>
+                                        </li>
+                                        <li class="sub">
+                                            <a href="#">Aboutus</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="footer--second--links">
+                                    <ul class="footer--frist--links--items">
+                                        <li class="footer--frist--links--item">
+                                            <a href="#">Contact</a>
+                                        </li>
+                                        <li class="footer--frist--links--item">
+                                            <a href="#">Sign In</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="cointainer">
+                                <div class="footer--contact">
+                                    <p>
+                                        <a href="tel:19611" style="margin-left:10px;"><i
+                                                class="fas fa-phone-alt icon"></i> 19611 - 01140293248</a>
+                                    </p>
+                                    <p>
+                                        <a href="mailto:Warsha@hotmail.com"><i class="far fa-envelope icon"></i>
+                                            Warsha@hotmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <form action="#" method="post" id="contact">
+                            <div class="footer--form">
+                                <h1>Contact us</h1>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="input-icons">
+                                            <i class="fa fa-user icon"></i>
+                                            <input class="input-field" type="text" placeholder="First Name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="input-icons">
+                                            <i class="fa fa-user icon"></i>
+                                            <input class="input-field" type="text" placeholder="Last Name" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="input-icons">
+                                            <i class="fas fa-phone-alt icon"></i>
+                                            <input class="input-field" type="tel" placeholder="Enter Your Telephone" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="input-icons">
+                                            <i class="far fa-envelope icon"></i>
+                                            <input class="input-field" type="text" placeholder="Enter Your Email" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+
+                                        <div class="input-icons">
+                                            <textarea name="massage" placeholder="Enter Your Message"
+                                                class="input-field"></textarea>
+                                        </div>
+                                        <button class="btn footer--btn">Send <i class="fas fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+    </footer>
     </div>
 
 
@@ -579,6 +727,54 @@
     <script src="assets/js/vendor/popper.min.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
     <script src="assets/js/src/script.js"></script>
+    <script src="assets/js/src/home.js"></script>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <script>
+        // TODO: Replace the following with your app's Firebase project configuration
+        // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
+        var firebaseConfig = {
+            apiKey: "AIzaSyAC0G0nvAK7KbKx2qgkyGJ16jORzlzyE-Y",
+            authDomain: "carworkshop-7ec37.firebaseapp.com",
+            databaseURL: "https://carworkshop-7ec37-default-rtdb.firebaseio.com",
+            projectId: "carworkshop-7ec37",
+            storageBucket: "carworkshop-7ec37.appspot.com",
+            messagingSenderId: "640153744311",
+            appId: "1:640153744311:web:27c8a4e0fe189c40136e32",
+            measurementId: "G-641RNWK139"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+
+        // var id = parseInt(window.location.href.split('=')[1]) - 1;
+        db.collection("workshop").where("id", "==", 3).get()
+            .then(function (data) {
+                for (const key in data.docs) {
+                    document.getElementById("warshaName").innerHTML = data.docs[key].data().name;
+                    document.getElementById("warshaAddress").innerHTML = data.docs[key].data().address;
+                    document.getElementById("warshaPhone").innerHTML = data.docs[key].data().phonenumber;
+                    document.getElementById("warshaRate").innerHTML = data.docs[key].data().rate;
+                    document.getElementById("shopimg").style.backgroundImage = data.docs[key].data().image;
+                    document.getElementById("warshaCity").innerHTML = data.docs[key].data().city;
+                    document.title = data.docs[key].data().name;
+                }
+            })
+            .catch((error) => {
+                console.error("Error ");
+            });
+
+    </script>
 
 </body>
 

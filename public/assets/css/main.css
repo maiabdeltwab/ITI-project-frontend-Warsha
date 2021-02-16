@@ -105,6 +105,12 @@ body {
 .header--main {
   width: 100%;
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #3A3535;
+  z-index: 1001;
+  height: 73px;
   top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,6 +170,7 @@ body {
 
 .header--main .header--menu--items .header--menu--item a:hover {
   color: #d89216;
+  text-decoration: underline;
 }
 
 .header--main .header--signin {
@@ -182,6 +189,7 @@ body {
 
 .header--main .header--signin a:hover {
   color: #d89216;
+  text-decoration: underline;
 }
 
 .header--main .header--signin a:hover i {
@@ -209,6 +217,8 @@ body {
 
 .header--main .collaps .collaps-icon {
   background: white;
+  width: 35px;
+  height: 5px;
   width: 27px;
   height: 3px;
   margin-bottom: 7px;
@@ -1624,7 +1634,8 @@ html {
 }
 
 .clientFeedback .clientImage {
-  width: 80px;
+  width: 75px;
+  height: 70px;
 }
 
 .clientFeedback .userComment {
@@ -1713,7 +1724,7 @@ html {
        appearance: button;
   outline: none;
   text-align: center;
-  margin-left: 5rem;
+  margin-left: 1rem;
   margin-bottom: 1.25rem;
   margin-top: 2.5rem;
 }
@@ -1737,7 +1748,11 @@ html {
 }
 
 .box select option {
-  padding: 1rem;
+  padding: 0rem;
+}
+
+.workShops {
+  margin-top: 0%;
 }
 
 .workShops .row {
@@ -1746,7 +1761,7 @@ html {
 }
 
 .workShops .col-md-6 {
-  padding-left: 2rem !important;
+  padding-left: 0rem !important;
 }
 
 /***********************************
@@ -2103,6 +2118,7 @@ html {
 }
 
 .profile--page .card {
+  margin-top: 8rem;
   margin: 12rem auto;
   border: none;
   border-radius: 5px;
@@ -2230,5 +2246,9 @@ html {
   margin-top: 8rem;
   margin-bottom: 0%;
   height: 12rem;
+}
+
+.imergancyfooter {
+  margin-top: 120px;
 }
 /*# sourceMappingURL=main.css.map */
