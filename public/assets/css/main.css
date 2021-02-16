@@ -111,6 +111,15 @@ body {
   background-color: #3A3535;
   z-index: 1001;
   height: 73px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #171616;
+  padding: 0 1rem;
+  z-index: 1001;
+  height: 60px;
+  font-family: "Comfortaa", cursive;
 }
 
 .header--main .header--logo {
@@ -128,6 +137,7 @@ body {
 .header--main .header--logo h1 {
   padding: 3px 10px;
   color: white;
+  font-size: 1.6em;
 }
 
 .header--main .header--menu--items {
@@ -200,6 +210,7 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   margin-right: 15px;
+  margin-left: 5px;
   position: relative;
   display: none;
 }
@@ -208,6 +219,8 @@ body {
   background: white;
   width: 35px;
   height: 5px;
+  width: 27px;
+  height: 3px;
   margin-bottom: 7px;
 }
 
@@ -2104,6 +2117,7 @@ html {
 
 .profile--page .card {
   margin-top: 8rem;
+  margin: 12rem auto;
   border: none;
   border-radius: 5px;
   padding-top: 9rem;
