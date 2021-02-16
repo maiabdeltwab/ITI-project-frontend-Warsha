@@ -96,7 +96,7 @@ function save() {
     var phone = $('#phone').val();
     var password = $('#password1').val();
 
-    db.collection("users").doc(username).set({
+    db.collection("users").add({
             userame: username,
             firstName: firstName,
             lastName: lastName,
@@ -105,6 +105,13 @@ function save() {
             password: password
         })
         .then(() => {
+            db.collection("user_pref").add({
+                username: username,
+                carBrand: "",
+                carModel: "",
+                Location: "",
+                Region: ""
+            })
             form.submit(); //submit form when finish
         })
         .catch((error) => {

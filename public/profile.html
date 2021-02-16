@@ -12,14 +12,123 @@
 
 </head>
 
-<body>
-
-
+<body class="profile--page">
+    <div class="container">
+        <div class="card mb-5">
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <img class="profile--photo" src="/public/assets/images/profile.jpg" alt="Profile image">
+                </div>
+                <div class="row justify-content-center">
+                    <a id="name" href="">
+                        <h2 id="full-name"></h2>
+                    </a>
+                </div>
+                <div class="row justify-content-center mb-3">
+                    <small class="text-muted" id="username"></small>
+                </div>
+                <div class="">
+                    <div class="p-5 bg-white rounded shadow mb-5">
+                        <div class="row justify-content-center">
+                            <ul id="myTab" role="tablist" class="nav nav-tabs nav-pills flex-column flex-sm-row text-center bg-light border-0 rounded-nav">
+                                <li class="nav-item flex-sm-fill">
+                                    <a id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" class="nav-link border-0 active">Information</a>
+                                </li>
+                                <li class="nav-item flex-sm-fill">
+                                    <a id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" class="nav-link border-0">Preferences</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div id="tabContent" class="tab-content col-12 col-md-9">
+                                <div id="home" role="tabpanel" aria-labelledby="home-tab" class="tab-pane fade px-4 py-5 show active">
+                                    <div class="form-group row">
+                                        <label for="first-name" class="title">First name</label>
+                                        <input type="text" class="form-control" id="first-name" disabled>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="last-name" class="title">Last name</label>
+                                        <input type="text" class="form-control" id="last-name" disabled>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="email" class="title">Email address</label>
+                                        <input type="email" class="form-control" id="email" disabled>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="phone" class="title">Phone number</label>
+                                        <input type="text" class="form-control" id="phone" disabled>
+                                    </div>
+                                    <div class="row">
+                                        <button class="btn btn-dark mt-2" id="editInfo">Edit</button>
+                                    </div>
+                                </div>
+                                <div id="profile" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane fade px-4 py-5">
+                                    <div class="form-group row">
+                                        <label for="car-brand" class="title">Car Brand</label>
+                                        <input type="text" class="form-control" id="car-brand" disabled>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="car-model" class="title">Car Model</label>
+                                        <input type="text" class="form-control" id="car-model" disabled>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="location" class="title">Location</label>
+                                        <input type="email" class="form-control" id="location" disabled>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="region" class="title">Region</label>
+                                        <input type="text" class="form-control" id="region" disabled>
+                                    </div>
+                                    <div class="row">
+                                        <button class="btn btn-dark mt-2" id="editPref">Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Bootstrap core JavaScript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/vendor/popper.min.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+    <!-- ------------------------------------- Fire base ------------------------------------------------ -->
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
+    <!--  Firebase product  -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+
+    <script>
+        // Firebase project configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAC0G0nvAK7KbKx2qgkyGJ16jORzlzyE-Y",
+            authDomain: "carworkshop-7ec37.firebaseapp.com",
+            databaseURL: "https://carworkshop-7ec37-default-rtdb.firebaseio.com",
+            projectId: "carworkshop-7ec37",
+            storageBucket: "carworkshop-7ec37.appspot.com",
+            messagingSenderId: "640153744311",
+            appId: "1:640153744311:web:27c8a4e0fe189c40136e32",
+            measurementId: "G-641RNWK139"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+    </script>
+
     <script src="assets/js/src/profile.js"></script>
+    <script>
+    </script>
 </body>
 
 </html>
