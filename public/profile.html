@@ -11,10 +11,41 @@
     <link rel="stylesheet" href="assets/css/main.css">
 
 </head>
+<header>
+    <div class="header--main">
+        <div class="header--logo">
+            <h1>Warsha</h1>
+        </div>
+
+        <ul class="header--menu--items disapperd">
+            <li class="header--menu--item"><a href="home page.html">Home</a></li>
+            <li class="header--menu--item"><a href="#">About Us</a></li>
+            <li class="header--menu--item"><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="header--signin">
+            <a href="/public/login.html"><i class="fas fa-user-circle"></i> Sign in</a>
+        </div>
+        <div class="collaps">
+            <div class="collaps--sign">
+                <div class="collaps-icon"></div>
+                <div class="collaps-icon"></div>
+                <div class="collaps-icon"></div>
+            </div>
+            <div class="collaps--menu">
+                <ul class="collaps--items">
+                    <li class="collaps--item"><a href="home page.html">Home</a></li>
+                    <li class="collaps--item"><a href="#">About Us</a></li>
+                    <li class="collaps--item"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
 
 <body class="profile--page">
     <div class="container">
-        <div class="card mb-5">
+        <div class="card">
             <div class="card-body">
                 <div class="row justify-content-center">
                     <img class="profile--photo" src="/public/assets/images/profile.jpg" alt="Profile image">
@@ -90,6 +121,110 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="container">
+                        <div class="footer--logo--icon">
+                            <h1>Warsha</h1>
+                            <div class="footer--icons">
+                                <a href="#" target="_blanck"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#" target="_blanck">
+                                    <i class="fab fa-twitter"></i></a>
+                                <a href="#" target="_blanck">
+                                    <i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="footer--links">
+                            <div class="footer--frist--links">
+                                <ul class="footer--frist--links--items">
+                                    <li class="footer--frist--links--item">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="footer--frist--links--item">
+                                        <a href="#">Service </a>
+                                        <br />
+                                        <p class="sub--link sub"><a href="#">Emergancy</a></p>
+                                        <p class="sub--link"><a href="#">Request Repair</a></p>
+                                    </li>
+                                    <li class="sub">
+                                        <a href="#">Aboutus</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer--second--links">
+                                <ul class="footer--frist--links--items">
+                                    <li class="footer--frist--links--item">
+                                        <a href="#">Contact</a>
+                                    </li>
+                                    <li class="footer--frist--links--item">
+                                        <a href="#">Sign In</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cointainer">
+                            <div class="footer--contact">
+                                <p>
+                                    <a href="tel:19611" style="margin-left:10px;"><i class="fas fa-phone-alt icon"></i> 19611 - 01140293248</a>
+                                </p>
+                                <p>
+                                    <a href="mailto:Warsha@hotmail.com"><i class="far fa-envelope icon"></i> Warsha@hotmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <form action="#" method="post" id="contact">
+                        <div class="footer--form">
+                            <h1>Contact us</h1>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="input-icons">
+                                        <i class="fa fa-user icon"></i>
+                                        <input class="input-field" type="text" placeholder="First Name" />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-icons">
+                                        <i class="fa fa-user icon"></i>
+                                        <input class="input-field" type="text" placeholder="Last Name" />
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="input-icons">
+                                        <i class="fas fa-phone-alt icon"></i>
+                                        <input class="input-field" type="tel" placeholder="Enter Your Telephone" />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-icons">
+                                        <i class="far fa-envelope icon"></i>
+                                        <input class="input-field" type="text" placeholder="Enter Your Email" />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+
+                                    <div class="input-icons">
+                                        <textarea name="massage" placeholder="Enter Your Message" class="input-field"></textarea>
+                                    </div>
+                                    <button class="btn footer--btn">Send <i class="fas fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
     <!-- Bootstrap core JavaScript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/vendor/popper.min.js"></script>
@@ -127,6 +262,7 @@
     </script>
 
     <script src="assets/js/src/profile.js"></script>
+    <script src="assets/js/src/home.js"></script>
     <script>
     </script>
 </body>
