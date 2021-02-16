@@ -105,12 +105,6 @@ body {
 .header--main {
   width: 100%;
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #3A3535;
-  z-index: 1001;
-  height: 73px;
   top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -170,7 +164,6 @@ body {
 
 .header--main .header--menu--items .header--menu--item a:hover {
   color: #d89216;
-  text-decoration: underline;
 }
 
 .header--main .header--signin {
@@ -189,7 +182,6 @@ body {
 
 .header--main .header--signin a:hover {
   color: #d89216;
-  text-decoration: underline;
 }
 
 .header--main .header--signin a:hover i {
@@ -217,8 +209,6 @@ body {
 
 .header--main .collaps .collaps-icon {
   background: white;
-  width: 35px;
-  height: 5px;
   width: 27px;
   height: 3px;
   margin-bottom: 7px;
@@ -236,6 +226,7 @@ body {
 }
 
 .header--main .collaps .collaps--menu .collaps--items {
+  list-style: none;
   text-align: center;
   padding: 25px;
 }
@@ -482,7 +473,6 @@ html {
 
 .header--home .header--main .header--menu--items .header--menu--item a:hover {
   color: #d89216;
-  text-decoration: underline;
 }
 
 .header--home .header--main .header--signin {
@@ -2117,7 +2107,6 @@ html {
 }
 
 .profile--page .card {
-  margin-top: 8rem;
   margin: 12rem auto;
   border: none;
   border-radius: 5px;
