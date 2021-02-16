@@ -226,6 +226,7 @@ body {
 }
 
 .header--main .collaps .collaps--menu .collaps--items {
+  list-style: none;
   text-align: center;
   padding: 25px;
 }
