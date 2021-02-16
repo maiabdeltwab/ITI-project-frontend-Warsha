@@ -4,7 +4,7 @@
 
 .signup--page {
     & {
-        background-color: $secondary;
+        background-color: $dark;
         background-size: cover;
     }
     &::after {
@@ -12,7 +12,7 @@
         position: absolute;
         background: url('/public/assets/images/sigup-background.jpg');
         background-size: cover;
-        opacity: 0.3;
+        opacity: 0.2;
         top: 0;
         left: 0;
         bottom: 0;
@@ -69,19 +69,19 @@
             padding-left: 0rem;
         }
         input {
-            display: inline-block;
-            height: 2.2rem;
-            width: 100%;
-            margin-bottom: 1rem;
-            padding-bottom: 0.1rem;
-            padding-left: 2.1rem;
-            border: none;
-            border-bottom: 1px solid $light-gray;
-            background-color: transparent;
-            color: $dark;
-            font-size: 18px;
-        }
-        input {
+            & {
+                display: inline-block;
+                height: 2.2rem;
+                width: 100%;
+                margin-bottom: 1rem;
+                padding-bottom: 0.1rem;
+                padding-left: 2.1rem;
+                border: none;
+                border-bottom: 1px solid $light-gray;
+                background-color: transparent;
+                color: $dark;
+                font-size: 18px;
+            }
             &:active {
                 border-bottom: 1rem solid $danger;
             }
@@ -113,6 +113,8 @@
         }
         .btn-primary {
             color: $text-light;
+            font-family: $header-font-stack;
+            letter-spacing: 1px;
         }
     }
     .left--side {
