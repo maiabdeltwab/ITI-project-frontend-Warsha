@@ -788,6 +788,125 @@ footer .footer--btn i {
   border-radius: 40px;
 }
 
+.btn {
+  border-radius: 40px;
+  border: none;
+}
+
+.workShops .card {
+  font-family: Roboto, sans-serif;
+  background: #fff;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0rem 10.875rem 5rem rgba(36, 37, 68, 0.1);
+          box-shadow: 0rem 10.875rem 5rem rgba(36, 37, 68, 0.1);
+  max-width: 37.5rem;
+  border-radius: 1.563rem;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.workShops .card h2 {
+  display: block;
+  font-size: 1.5rem;
+  -webkit-margin-before: 0.83rem;
+          margin-block-start: 0.83rem;
+  -webkit-margin-after: 0.83rem;
+          margin-block-end: 0.83rem;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.workShops .card .title {
+  padding: 1rem;
+  text-align: right;
+  color: #D89216;
+  font-weight: bold;
+  font-size: 0.813rem;
+}
+
+.workShops .card .address {
+  padding: 0.5rem 1rem;
+  font-size: 0.938rem;
+}
+
+.workShops .card .actions {
+  text-align: right;
+}
+
+.workShops .card svg {
+  width: 5.313rem;
+  height: 5.313rem;
+  margin: 0 auto;
+}
+
+.workShops .card .card-text {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  width: 100%;
+}
+
+.workShops .card .title-total {
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  min-height: 270;
+}
+
+.workShops .card .portada {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+}
+
+.workShops .card .phonelb {
+  color: #8c0909;
+  padding: 0.313rem;
+}
+
+.workShops .card button {
+  border: 0.063rem #d89216 solid;
+  background: none;
+  font-size: 0.938rem;
+  color: #d89216;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-bottom: auto;
+}
+
+.workShops .card .wsbtn {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  border-radius: 1.563rem;
+}
+
+.workShops .card .rate {
+  font-size: 1.1rem;
+  margin: .15rem;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  border-radius: 50%;
+  border: 6px solid #F4F4F4;
+  top: 11%;
+  left: 26.5%;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+
 .errorImage {
   width: 10rem;
 }
@@ -1009,119 +1128,7 @@ footer .footer--btn i {
 }
 
 .EditService .UpdateService {
-  color: #3A3535;}
-.card {
-  font-family: Roboto, sans-serif;
-  background: #fff;
-  border-radius: 0.25rem;
-  -webkit-box-shadow: 0rem 10.875rem 5rem rgba(36, 37, 68, 0.1);
-          box-shadow: 0rem 10.875rem 5rem rgba(36, 37, 68, 0.1);
-  max-width: 37.5rem;
-  border-radius: 1.563rem;
-  position: absolute;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.card h2 {
-  display: block;
-  font-size: 1.5rem;
-  -webkit-margin-before: 0.83rem;
-          margin-block-start: 0.83rem;
-  -webkit-margin-after: 0.83rem;
-          margin-block-end: 0.83rem;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
-  font-weight: normal;
-  margin: 0;
-  padding: 0 1rem;
-}
-
-.card .title {
-  padding: 1rem;
-  text-align: right;
-  color: #D89216;
-  font-weight: bold;
-  font-size: 0.813rem;
-}
-
-.card .address {
-  padding: 0.5rem 1rem;
-  font-size: 0.938rem;
-}
-
-.card .actions {
-  text-align: right;
-}
-
-.card svg {
-  width: 5.313rem;
-  height: 5.313rem;
-  margin: 0 auto;
-}
-
-.card .card-text {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  width: 100%;
-}
-
-.card .title-total {
-  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
-  min-height: 270;
-}
-
-.card .portada {
-  width: 100%;
-  height: 100%;
-  border-top-left-radius: 1.25rem;
-  border-bottom-left-radius: 1.25rem;
-  background-size: cover;
-  background-repeat: no-repeat, repeat;
-}
-
-.card .phonelb {
-  color: #8c0909;
-  padding: 0.313rem;
-}
-
-.card button {
-  border: 0.063rem #d89216 solid;
-  background: none;
-  font-size: 0.938rem;
-  color: #d89216;
-  cursor: pointer;
-  padding: 0.5rem;
-  margin-bottom: auto;
-}
-
-.card .wsbtn {
-  position: absolute;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  border-radius: 1.563rem;
-}
-
-.card .rate {
-  font-size: 1.1rem;
-  margin: .15rem;
-}
-
-.logo {
-  width: 5rem;
-  height: 5rem;
-  position: absolute;
-  border-radius: 50%;
-  border: 6px solid #F4F4F4;
-  top: 11%;
-  left: 26.5%;
-  background-repeat: no-repeat, repeat;
-  background-size: cover;
+  color: #3A3535;
 }
 
 .WshopTd {
