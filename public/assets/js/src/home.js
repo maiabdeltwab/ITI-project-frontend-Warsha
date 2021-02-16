@@ -1,3 +1,9 @@
+if (sessionStorage.username) {
+    var username = sessionStorage.username;
+    $('#login').attr("href", "/public/profile.html")
+    $('#user-login').text(username);
+}
+///////////////////////////////////////////////////////////
 let collapse = document.querySelector(".collaps--sign");
 let collapseMenu = document.querySelector(".collaps--menu");
 var emergancyButton = document.querySelector(".emergancy--btn");
