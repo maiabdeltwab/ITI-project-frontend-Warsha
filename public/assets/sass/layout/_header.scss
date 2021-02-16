@@ -7,7 +7,7 @@
   width: 100%;
   position: fixed;
   display: flex;
-  background-color: $secondary;
+  background-color:$secondary;
   z-index: 1001;
   height: 73px;
 
@@ -61,10 +61,13 @@
       &:hover {
         color: $primary;
         text-decoration: underline;
+        i{
+          color: $primary;
+        }
       }
 
       i {
-        margin-right: 7px;
+        margin-right: 4px;
         color: white;
 
         &:hover {
@@ -104,6 +107,12 @@
         .collaps--item {
           padding: 25px;
           white-space: nowrap;
+          a{
+            color: white;
+            &:hover{
+              color: $primary;
+            }
+          }
         }
       }
     }
@@ -119,7 +128,7 @@
 
 
 @media screen and (max-width: 900px) {
-  .header {
+  .header--main {
 
     .disapperd {
       display: none;

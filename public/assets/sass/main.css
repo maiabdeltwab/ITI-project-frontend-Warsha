@@ -586,7 +586,7 @@ html {
 }
 
 .slid .main {
-  background: url(../images/sild1.jpg) no-repeat center;
+  background: url(../images/pexels-hebert-santos-3757226.jpg) no-repeat center;
   position: relative;
   height: 95vh;
   display: -webkit-box;
@@ -729,8 +729,7 @@ html {
 }
 
 #service .display .signup-emergancy .d-grid .left-container .signup-form input[type="text"],
-#service .display .signup-emergancy .d-grid .left-container .signup-form input[type="tel"],
-#service .display .signup-emergancy .d-grid .left-container .signup-form input[type="checkbox "] {
+#service .display .signup-emergancy .d-grid .left-container .signup-form input[type="tel"] {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -867,7 +866,6 @@ html {
 #service .service--type .service--emergancy .service--emergancy--content .service--emergancy--items {
   padding: 20px;
   list-style: none;
-  white-space: nowrap;
 }
 
 #service .service--type .service--emergancy .service--emergancy--content .service--emergancy--items .service--emergancy--item {
@@ -918,7 +916,6 @@ html {
 #service .service--type .requist--repair .service--emergancy--content .service--emergancy--items {
   padding: 20px;
   list-style: none;
-  white-space: nowrap;
 }
 
 #service .service--type .requist--repair .service--emergancy--content .service--emergancy--items .service--emergancy--item {
@@ -1022,23 +1019,6 @@ html {
   font-weight: 500;
 }
 
-.text .padding .form-inputs i {
-  color: #d89216;
-  bottom: 4rem;
-  font-size: 16px;
-}
-
-.text .padding .form-inputs i.error--icon {
-  display: none;
-  color: #8c0909;
-  padding-top: 10px;
-  margin-left: -20px;
-}
-
-.text .padding .form-inputs .wrong--input {
-  font-size: 60px;
-}
-
 .text .padding .form-inputs textarea {
   outline: none;
   font-size: 14px;
@@ -1051,6 +1031,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 15px;
+  margin-top: 20px;
 }
 
 .text .padding .form-inputs .form-input {
@@ -1062,7 +1043,9 @@ html {
   letter-spacing: 0.5px;
   padding: 14px 20px;
   width: 100%;
-  margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 100px;
 }
 
 .toprated {

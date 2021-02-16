@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>warsha</title>
   <!-- font assowame -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
@@ -21,51 +21,46 @@
 </head>
 
 <body class="body--home">
-  <header>
-    <div class="header--main">
-      <div class="header--logo">
-        <h1>warsha</h1>
-      </div>
-
-      <ul class="header--menu--items disapperd">
-        <li class="header--menu--item"><a href="index.html">Home</a></li>
-        <li class="header--menu--item"><a href="#service">Service</a></li>
-        <li class="header--menu--item"><a href="#">About Us</a></li>
-        <li class="header--menu--item"><a href="#">Contact</a></li>
-      </ul>
-
-      <div class="header--signin">
-        <a href="#"><i class="fas fa-user-circle"></i> Sign in</a>
-      </div>
-      <div class="collaps">
-        <div class="collaps--sign">
-          <div class="collaps-icon"></div>
-          <div class="collaps-icon"></div>
-          <div class="collaps-icon"></div>
+  <div class="header--home">
+    <header>
+      <div class="header--main">
+        <div class="header--logo">
+          <h1>warsha</h1>
         </div>
-        <div class="collaps--menu">
-          <ul class="collaps--items">
-            <li class="collaps--item"><a href="#">Home</a></li>
-            <li class="collaps--item"><a href="#">Service</a></li>
-            <li class="collaps--item"><a href="#">About Us</a></li>
-            <li class="collaps--item"><a href="#">Contact</a></li>
-          </ul>
+        <ul class="header--menu--items disapperd">
+          <li class="header--menu--item"><a href="home page.html">Home</a></li>
+          <li class="header--menu--item"><a href="#service">Service</a></li>
+          <li class="header--menu--item"><a href="#">About Us</a></li>
+          <li class="header--menu--item"><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="header--signin">
+          <a href="signup.html"><i class="fas fa-user-circle"></i> Sign in</a>
+        </div>
+        <div class="collaps">
+          <div class="collaps--sign">
+            <div class="collaps-icon"></div>
+            <div class="collaps-icon"></div>
+            <div class="collaps-icon"></div>
+          </div>
+          <div class="collaps--menu">
+            <ul class="collaps--items">
+              <li class="collaps--item"><a href="home page.html">Home</a></li>
+              <li class="collaps--item"><a href="#service">Service</a></li>
+              <li class="collaps--item"><a href="#">About Us</a></li>
+              <li class="collaps--item"><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
+  </div>
   <div class="slid">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-
       <ol class="carousel-indicators slid--node">
         <li data-target="#myCarousel" data-slide-to="0" class="node--slider active "></li>
         <li data-target="#myCarousel" data-slide-to="1" class="node--slider"></li>
         <li data-target="#myCarousel" data-slide-to="2" class="node--slider"></li>
       </ol>
-
-
-
       <div class="carousel-inner">
         <div class="item active">
           <div class="main">
@@ -74,17 +69,13 @@
             </div>
           </div>
         </div>
-
         <div class="item">
           <div class="main main-two">
             <div class="main-3">
-
               <h1>WE Can Delivere You To Any Car WorkShop In Any Where</h1>
-
             </div>
           </div>
         </div>
-
         <div class="item">
           <div class="main main-one">
             <div class="main-3">
@@ -98,6 +89,70 @@
     </div>
   </div>
   <div id="service">
+    <div class="display">
+      <div class="signup-emergancy">
+        <div class="d-grid">
+          <i class="fas fa-times " id="cross"></i>
+          <div class="left-container">
+            <h3 class="form-header">Important Data</h3>
+            <div class="signup-form">
+              <form action="#">
+                <table>
+                  <tr class="half">
+                    <td>
+                      <div class="box">
+                        <select id="select-box1" class="city1" required onchange="filterCity()">
+                          <option value="all" disabled selected>Select Your city</option>
+                          <option value="fayoum">Fayoum</option>
+                          <option value="minya">Minia</option>
+                          <option value="giza">Giza</option>
+                          <option value="cairo">Cairo</option>
+
+                        </select>
+                      </div>
+                      <div class="box">
+                        <select id="select-box1" class="city2" required onchange="filterLoction()">
+                          <option value="all" disabled selected>Select Your Location</option>
+                          <option value="itsa">Itsa</option>
+                          <option value="fayoum">Fayoum</option>
+                          <option value="damares">Damares</option>
+                          <option value="minya">Minya</option>
+                          <option value="giza">Giza</option>
+                          <option value="maadi">Maadi</option>
+                          <option value="mohandesen">Mohandesen</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="fa fa-user icon"></i>
+                      <input type="text" placeholder="Enter your Name" required class="name" onfocus="removeIcon(this)"
+                        onfocusout="resetIcon(this)">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i class="fa fa-phone icon"></i>
+                      <input type="tel" placeholder="Enter your Phone Number" class="telephone" required
+                        onfocus="removeIcon(this)" onfocusout="resetIcon(this)">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="checkbox-inline" style="font-size: 16px;"><input type="checkbox" value="">Want Wensh</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><button type="submit" id="submit">Show Results</button></td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <header>
       <h1>Ser<span style="color: #d89216">vice</span></h1>
     </header>
@@ -108,7 +163,7 @@
             <div class=" col-md-6 col-12">
               <img src="../public/assets/images/emergancy1.jpg">
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-md-6 col-12">
               <div class="service--emergancy--content">
                 <ul class="service--emergancy--items">
                   <li class="service--emergancy--item">
@@ -136,7 +191,6 @@
                     <button class="btn emergancy--btn">emergancy</button>
                   </div>
                 </ul>
-
               </div>
             </div>
           </div>
@@ -145,7 +199,7 @@
       <div class="requist--repair">
         <div class="row">
           <div class="container">
-            <div class="col-lg-6 col-12">
+            <div class="col-md-6 col-12">
               <div class="service--emergancy--content">
                 <ul class="service--emergancy--items">
                   <li class="service--emergancy--item">
@@ -162,18 +216,16 @@
                   </li>
                   <li class="service--emergancy--item">
                     <i class="fas fa-wrench"></i>
-                    Come To You  Any Where.
-
+                    Come To You Any Where.
                   </li>
                   <li class="service--emergancy--item">
                     <i class="fas fa-wrench"></i>
                     We Can connet YOu To Any car workshop.
                   </li>
                   <div style="text-align: center; margin-top: 10px;">
-                    <button class="btn emergancy--btn">emergancy</button>
+                    <button class="btn emergancy--btn" onclick="document.location='signup.html'">requist rebair</button>
                   </div>
                 </ul>
-
               </div>
             </div>
             <div class=" col-md-6 col-12">
@@ -193,26 +245,59 @@
         </div>
       </div>
       <div class="col-12 padding">
-        <form action="#" method="post">
+        <form method="post">
           <h2 class="mb-3">Register Here</h2>
           <div class="form-inputs">
-            <input class="form-input" placeholder="Frist Name" name="name" type="text" required="">
-            <input class="form-input" placeholder="Last Name" name="name" type="text" required="">
-            <input class="form-input" placeholder="workshop Name" name="WorkShop Name" type="text" required="">
-            <input class="form-input" placeholder="workShop Number" name="workShop Number" type="tel" required="">
-            <input class="form-input" placeholder="Goverment" name="Goverment" type="text" required="">
-            <input class="form-input" placeholder="city" name="city" type="text" required="">
-            <textarea placeholder="Adress In Details"></textarea>
-            <button Class="btn"> Get registered</button>
-            <span>By registering, you agree to our <a href="#">Terms & Conditions.</a></span>
+            <div class="row">
+              <div class="col-6">
+                <input class="form-input" placeholder="Frist Name" id="Fristname" type="text" required="">
+                <i class="fa fa-times error--icon" data-toggle="tooltip" data-placement="top">
+                </i>
+              </div>
+              <div class="col-6">
+                <input class="form-input" placeholder="Last Name" id="Lastname" type="text" required="">
+                <i class="fa fa-times error--icon" data-toggle="tooltip" data-placement="top">
+                </i>
+              </div>
+              <div class="col-6">
+                <input class="form-input" placeholder="workshop Name" id="WorkShopName" type="text" required="">
+                <i class="fa fa-times error--icon" data-toggle="tooltip" data-placement="top">
+                </i>
+              </div>
+              <div class="col-6">
+                <input class="form-input" placeholder="workShop Number" id="workShopNumber" type="tel" required="">
+                <i class="fa fa-times error--icon" data-toggle="tooltip" data-placement="top">
+                </i>
+              </div>
+              <div class="col-6">
+                <input class="form-input" placeholder="Enter password" id="password1" type="password" required="">
+                <i class="fa fa-times error--icon" data-toggle="tooltip" data-placement="top">
+                </i>
+              </div>
+              <div class="col-6">
+                <input class="form-input" placeholder="Repeat password" id="password2" type="password" required="">
+                <i class="fa fa-times error--icon" data-toggle="tooltip" data-placement="top">
+                </i>
+              </div>
+              <div class="col-6">
+                <input class="form-input" placeholder="Goverment" id="Goverment" type="text" required="">
+              </div>
+              <div class="col-6">
+                <input class="form-input" placeholder="city" id="city" type="text" required="">
+              </div>
+              <div class="col-12"> 
+                <textarea placeholder="Adress In Details" id="adressIndetails" class="form-control"></textarea>
+              </div>
+            </div>
           </div>
         </form>
+        <button Class="btn" onclick="btnAdd()"> Get registered</button>
+        <span style="color: white;">By registering, you agree to our <a href="#" style="color: rgb(22, 22, 155);">Terms
+            & Conditions.</a></span>
       </div>
     </div>
   </div>
   </div>
-
-
   <div class="toprated">
     <header>
       <h1>Top Rated</h1>
@@ -242,7 +327,7 @@
               <span class="fa fa-star checked"></span>
             </li>
             </li>
-            <li><button class="btn">requist rebair</button></li>
+            <li><button class="btn btn-primary btn-lg">requist rebair</button></li>
           </ul>
         </div>
       </div>
@@ -270,7 +355,8 @@
               <span class="fa fa-star checked"></span>
             </li>
             <li>
-              <button class="btn">requist rebair</button></li>
+              <button class="btn">requist rebair</button>
+            </li>
           </ul>
         </div>
       </div>
@@ -416,118 +502,120 @@
       </div>
     </div>
   </div>
-  <footer>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-6 col-12">
-          <div class="container">
-            <div class="footer--logo--icon">
-              <div class="footer--logo">
-                <h1>Warsha</h1>
+  <div class="footer--home">
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <div class="container">
+              <div class="footer--logo--icon">
+                <div class="footer--logo">
+                  <h1>Warsha</h1>
+                </div>
+                <div class="footer--icons">
+                  <a href="#" target="_blanck"><i class="fab fa-facebook-square"></i></a>
+                  <a href="#" target="_blanck">
+                    <i class="fab fa-twitter"></i></a>
+                  <a href="#" target="_blanck">
+                    <i class="fab fa-instagram"></i></a>
+                </div>
               </div>
-              <div class="footer--icons">
-                <a href="#" target="_blanck"><i class="fab fa-facebook-square"></i></a>
-                <a href="#" target="_blanck">
-                  <i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blanck">
-                  <i class="fab fa-instagram"></i></a>
+              <div class="footer--links">
+                <div class="footer--frist--links">
+                  <ul class="footer--frist--links--items">
+                    <li class="footer--frist--links--item">
+                      <a href="#">Home</a>
+                    </li>
+                    <li class="footer--frist--links--item">
+                      <a href="#">Service </a>
+                      <br />
+                      <p class="sub--link sub"><a href="#">Emergancy</a></p>
+                      <p class="sub--link"><a href="#">Request Repair</a></p>
+                    </li>
+                    <li class="sub">
+                      <a href="#">Aboutus</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer--second--links">
+                  <ul class="footer--frist--links--items">
+                    <li class="footer--frist--links--item">
+                      <a href="#">Contact</a>
+                    </li>
+                    <li class="footer--frist--links--item">
+                      <a href="#">Sign In</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="footer--links">
-              <div class="footer--frist--links">
-                <ul class="footer--frist--links--items">
-                  <li class="footer--frist--links--item">
-                    <a href="#">Home</a>
-                  </li>
-                  <li class="footer--frist--links--item">
-                    <a href="#">Service </a>
-                    <br />
-                    <p class="sub--link sub"><a href="#">Emergancy</a></p>
-                    <p class="sub--link"><a href="#">Request Repair</a></p>
-                  </li>
-                  <li class="sub">
-                    <a href="#">Aboutus</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer--second--links">
-                <ul class="footer--frist--links--items">
-                  <li class="footer--frist--links--item">
-                    <a href="#">Contact</a>
-                  </li>
-                  <li class="footer--frist--links--item">
-                    <a href="#">Sign In</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="cointainer">
-              <div class="footer--contact">
-                <p style="color: white">
-                  <i class="fas fa-phone-alt icon"></i><a href="tel:19611"> 19611 - 01140293248</a>
-                </p>
-                <p style="color: white">
-                  <i class="far fa-envelope icon"></i><a href="mailto:Warsha@hotmail.com"> Warsha@hotmail.com</a>
-                </p>
+              <div class="cointainer">
+                <div class="footer--contact">
+                  <p style="color: white">
+                    <a href="tel:19611"> <i class="fas fa-phone-alt icon"></i>19611 - 01140293248</a>
+                  </p>
+                  <p style="color: white">
+                    <a href="mailto:Warsha@hotmail.com"> <i class="far fa-envelope icon"></i>Warsha@hotmail.com</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-6 col-12">
-          <form>
-            <div class="footer--form">
-              <h1>Contact us</h1>
-              <div class="row">
-                <div class="col-6">
-                  <div class="input-icons">
-                    <i class="fa fa-user icon"></i>
-                    <input class="input-field" type="text" placeholder="First Name" />
+          <div class="col-lg-6 col-12">
+            <form action="#" method="post" id="contact">
+              <div class="footer--form">
+                <h1>Contact us</h1>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="input-icons">
+                      <i class="fa fa-user icon"></i>
+                      <input class="input-field" type="text" placeholder="First Name" />
+                    </div>
                   </div>
-                </div>
-                <div class="col-6">
-                  <div class="input-icons">
-                    <i class="fa fa-user icon"></i>
-                    <input class="input-field" type="text" placeholder="Last Name" />
+                  <div class="col-6">
+                    <div class="input-icons">
+                      <i class="fa fa-user icon"></i>
+                      <input class="input-field" type="text" placeholder="Last Name" />
+                    </div>
                   </div>
-                </div>
-
-                <div class="col-12">
-                  <div class="input-icons">
-                    <i class="fas fa-phone-alt icon"></i>
-                    <input class="input-field" type="tel" placeholder="Enter Your Telephone" />
+                  <div class="col-12">
+                    <div class="input-icons">
+                      <i class="fas fa-phone-alt icon"></i>
+                      <input class="input-field" type="tel" placeholder="Enter Your Telephone" />
+                    </div>
                   </div>
-                </div>
-                <div class="col-12">
-                  <div class="input-icons">
-                    <i class="far fa-envelope icon"></i>
-                    <input class="input-field" type="text" placeholder="Enter Your Email" />
+                  <div class="col-12">
+                    <div class="input-icons">
+                      <i class="far fa-envelope icon"></i>
+                      <input class="input-field" type="text" placeholder="Enter Your Email" />
+                    </div>
                   </div>
-                </div>
-                <div class="col-12">
-                  <div class="input-icons">
-                    <textarea name="massage" placeholder="Enter Your Message" class="input-field"></textarea>
+                  <div class="col-12">
+                    <div class="input-icons">
+                      <textarea id="massage" placeholder="Enter Your Message" class="input-field"></textarea>
+                    </div>
+                    <button class="btn footer--btn">Send <i class="fas fa-arrow-right"></i></button>
                   </div>
-                  <button class="btn footer--btn">Send <i class="fas fa-arrow-right"></i></button>
                 </div>
               </div>
-            </div>
+          </div>
+          </form>
         </div>
-        </form>
       </div>
-    </div>
-    </div>
+  </div>
   </footer>
-
-
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="assets/js/vendor/popper.min.js"></script>
   <script src="assets/js/vendor/bootstrap.min.js"></script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
   <script src="assets/js/vendor/slick.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
   <script src="assets/js/src/home.js"></script>
 </body>
 
