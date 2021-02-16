@@ -4,10 +4,15 @@
 ***/
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
 @import url("https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css");
+body {
+  background-color: #f4f4f4;
+}
+
 *::-moz-selection {
   background-color: #3A3535;
   color: #ffffff;
 }
+
 *::selection {
   background-color: #3A3535;
   color: #ffffff;
@@ -102,17 +107,17 @@ body {
 /***********************************
 *   Signup style 
 ***********************************/
-body {
-  background-color: #3A3535;
+.signup--page {
+  background-color: #171616;
   background-size: cover;
 }
 
-body::after {
+.signup--page::after {
   content: "";
   position: absolute;
   background: url("/public/assets/images/sigup-background.jpg");
   background-size: cover;
-  opacity: 0.3;
+  opacity: 0.2;
   top: 0;
   left: 0;
   bottom: 0;
@@ -233,6 +238,8 @@ body::after {
 
 .signup--page .signup--form .btn-primary {
   color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
 }
 
 .signup--page .left--side {
@@ -290,5 +297,159 @@ body::after {
   border-radius: 0;
   -webkit-box-shadow: 1px 1px 4px black;
           box-shadow: 1px 1px 4px black;
+}
+
+/***********************************
+*   login page style 
+***********************************/
+.login--page {
+  background-color: #171616;
+  background-size: cover;
+}
+
+.login--page::after {
+  content: "";
+  position: absolute;
+  background: url("/public/assets/images/sigup-background.jpg");
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.login--page .container {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.login--page .login--header {
+  color: #d89216;
+  font-weight: 700;
+}
+
+.login--page .card {
+  border: none;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 0px;
+}
+
+.login--page .invalid-login {
+  color: #8c0909;
+  font-size: 17px;
+}
+
+.login--page [type="submit"] {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  font-size: 1em;
+  border-radius: 0px;
+}
+
+.login--page .form-group.login--form--group {
+  margin-bottom: 2rem;
+}
+
+.login--page .form-group input[type="text"],
+.login--page .form-group input[type="password"] {
+  display: block;
+  width: 100%;
+  height: 2.2rem;
+  padding-bottom: 0.1rem;
+  border: none;
+  border-bottom: 1px solid #d3d3d3;
+  background-color: transparent;
+  color: #171616;
+  font-size: 17px;
+}
+
+.login--page .form-group input[type="text"]:active, .login--page .form-group input[type="text"]:focus,
+.login--page .form-group input[type="password"]:active,
+.login--page .form-group input[type="password"]:focus {
+  padding-left: 0.5rem;
+  background-color: #ffffff67;
+}
+
+.login--page .form-group input[type="text"] ~ label,
+.login--page .form-group input[type="password"] ~ label {
+  position: absolute;
+  color: #3A3535;
+  top: 0;
+  left: 0;
+}
+
+.login--page .form-group input[type="text"]:focus ~ label,
+.login--page .form-group input[type="text"] ~ label.t,
+.login--page .form-group input[type="password"]:focus ~ label,
+.login--page .form-group input[type="password"] ~ label.t {
+  top: -21px;
+  left: -7px;
+  color: #d89216;
+  font-size: 0.8em;
+}
+
+.login--page .form-group input[type="text"] ~ .focus-border,
+.login--page .form-group input[type="password"] ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d89216;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.login--page .form-group input[type="text"]:focus ~ .focus-border,
+.login--page .form-group input[type="password"]:focus ~ .focus-border {
+  width: 100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+@media (max-width: 575px) {
+  .login--page .form-group.form-check {
+    margin-left: -0.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .login--page .form-group.form-check {
+    margin-left: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .login--page .form-group.form-check {
+    margin-left: 3.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .login--page .form-group.form-check {
+    margin-left: 3.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .login--page .form-group.form-check {
+    margin-left: 4.7rem;
+  }
+}
+
+.login--page .form-group.form-check .form-check-input {
+  height: 20px;
+}
+
+.login--page .login--footer {
+  font-size: 0.75em;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

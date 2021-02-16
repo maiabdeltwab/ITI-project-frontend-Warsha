@@ -2,7 +2,7 @@
 $('input').focus(function() {
     $(this).prev().fadeOut()
 });
-//get  back icon when blur 
+//get back icon and validate input when blur 
 $('input').blur(function() {
     $(this).prev().fadeIn();
     validate(this);
@@ -73,20 +73,47 @@ function validate(input) {
 
 
 function save() {
+
+    // ===> first: validate form inputs 
     var form = document.forms[0];
     for (let i = 1; i < (form.length - 1); i++) {
         if (!validate(form[i])) {
-            $('#alert-error').fadeIn();
-
+            $('#alert-error').fadeIn(); // show error alert
+            //hide the alert after 6 seconds
             let promise1 = (new Promise((resolve, reject) => {
                     setTimeout(() => resolve("Welcome !!"), 6000);
                 }))
                 .then(() => $('#alert-error').fadeOut())
-
-            return false;
+            return;
         }
     }
 
-    return true;
+    // ===> Second: save to database
+    var username = $('#username').val();
+    var firstName = $('#first-name').val();
+    var lastName = $('#last-name').val();
+    var email = $('#email').val();
+    var phone = $('#phone').val();
+    var password = $('#password1').val();
+
+    db.collection("users").doc(username).set({
+            userame: username,
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            phone: phone,
+            password: password
+        })
+        .then(() => {
+            form.submit(); //submit form when finish
+        })
+        .catch((error) => {
+            console.log("Error adding document: ", error);
+        });
+}
+
+
+function saveUser() {
+
 
 }

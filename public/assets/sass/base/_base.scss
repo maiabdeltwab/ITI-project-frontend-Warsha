@@ -1,6 +1,10 @@
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
+body {
+    background-color: $light;
+}
+
 *::selection {
     background-color: $secondary;
     color: $text-light;
